@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Inter&display=swap');
+
+.content-sct {
+    position: relative;
+    top: 20vh;
+    left: 0;
+    height: 1000vh;
+    width: 100vw;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: center;
+
+    .trend-sct {
+        width: 75vw;
+        height: auto;
+        background-color: #FFFFFF;
+        margin-top: 4vh;
+        border-radius: 2.5vh;
+
+        .title-sct {
+            margin-top: 3vh;
+            margin-left: 2vw;
+            width: auto;
+            height: auto;
+
+            p {
+                margin: auto;
+                font-family: 'Archivo', sans-serif;
+                font-weight: 400;
+                font-size: 2.25vh;
+            }
+        }
+
+        .grid-sct {
+            background-color: red;
+            width: 100vw;
+            height: auto;
+        }
+    }
+}
