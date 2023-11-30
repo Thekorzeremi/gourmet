@@ -25,6 +25,10 @@
             align-items: center;
             justify-content: center;
 
+            &:hover {
+                cursor: default;
+            }
+            
             p {
                 font-family: 'Inter', sans-serif;
                 font-weight: 600;
@@ -73,6 +77,10 @@
                 width: auto;
                 justify-content: center;
                 align-items: center;
+
+                &:hover {
+                    cursor: pointer;
+                }
                 
                 #img{
                     margin-right: 0.7vw;
