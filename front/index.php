@@ -5,14 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOUIZINE</title>
+    <title>🙍🏻‍♀️ KOUIZINE</title>
     <link rel="stylesheet" href="index.scss">
 </head>
 <body>
     <div class="navbar-sct">
             <div class="topbar-sct">
                 <div class="logo-sct">
-                    <p>KOUIZINE</p>
+                    <p>🍴 KOUIZINE</p>
                 </div>
                 <div class="search-sct">
                     <input type="search" name="searchbar" id="searchbar" placeholder='Des recettes, des ingrédients...'/>
@@ -74,7 +74,21 @@
                 </div>
             </div>
         </div>
-        <div class="aux3"></div>
+        <div class="fav-sct">
+            <div class="title-sct">
+                <h2>Nos coups de coeur ❤️</h2>
+            </div>
+            <div class="grid-sct">
+                <div class="grid">
+                    <div class="grid1"></div>
+                    <div class="grid2"></div>
+                    <div class="grid3"></div>
+                    <div class="grid4"></div>
+                    <div class="grid5"></div>
+                    <div class="grid6"></div>
+                </div>
+            </div>
+        </div>
         <div class="all-sct"></div>
     </div>
 </body>

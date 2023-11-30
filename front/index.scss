@@ -285,5 +285,98 @@ body {
 
 
         }
+
+        .fav-sct {
+            width: 75vw;
+            height: 150vh;
+            background-color: #FFFFFF;
+            margin-top: 4vh;
+            border-radius: 2.5vh;
+            display: flex;
+            flex-direction: column;
+
+            .title-sct {
+                margin-top: 3vh;
+                margin-left: 2vw;
+                width: auto;
+                height: auto;
+    
+                h2 {
+                    margin: 0;
+                    font-family: 'Archivo', sans-serif;
+                    font-weight: 700;
+                }
+
+            }
+
+            .grid-sct {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            
+            
+                .grid {
+                    display: grid; 
+                    grid-template-rows: 1fr 1fr 1fr;
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                    width: 95%;
+                    gap: 0px;
+                    height: 95%;
+    
+                    .grid1 {
+                        background-color: #C6DCDA; 
+                        grid-row-start: 1;
+                        grid-column-start: 1;
+                        grid-row-end: 2;
+                        grid-column-end: 10;
+                    }
+    
+                    .grid2 {
+                        background-color: #DDD9BD; 
+                        grid-row-start: 2;
+                        grid-column-start: 1;
+                        grid-row-end: 3;
+                        grid-column-end: 4;
+                    }
+                    
+                    .grid3 {
+                        background-color: #56EF98; 
+                        grid-row-start: 2;
+                        grid-column-start: 4;
+                        grid-row-end: 3;
+                        grid-column-end: 7;
+                    }   
+
+                    .grid4 {
+                        background-color: #C6DCDA; 
+                        grid-row-start: 2;
+                        grid-column-start: 7;
+                        grid-row-end: 3;
+                        grid-column-end: 10;
+                    }
+    
+                    .grid5 {
+                        background-color: #DDD9BD; 
+                        grid-row-start: 3;
+                        grid-column-start: 1;
+                        grid-row-end: 4;
+                        grid-column-end: 5;
+                    }
+                    
+                    .grid6 {
+                        background-color: #56EF98; 
+                        grid-row-start: 3;
+                        grid-column-start: 5;
+                        grid-row-end: 4;
+                        grid-column-end: 10;
+                    }  
+    
+                }
+            
+            }
+
+        }
     }
 }
