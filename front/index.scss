@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Inter&display=swap');
+
+body {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  margin: 0;
+  position: absolute;
+
+    .navbar-sct {
+        height: 20vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background-color: #FFF;
+        display: flex;
+        flex-direction: column;
+
+        .topbar-sct {
+            height: 50%;
+            width: 100%;
+            display: flex;
+
+            .logo-sct {
+                height: 100%;
+                width: 15vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    cursor: default;
+                }
+                
+                p {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 600;
+                    font-size: 4vh;
+                }
+            }
+
+            .search-sct {
+                height: 100%;
+                width: 85vw;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                #searchbar {
+                    height: 100%;
+                    width: 75vw;
+                    border: none;
+                    outline: none;
+                
+                    // &::placeholder {
+                    //     font-family: ;
+                    // }
+                }
+
+                #searchbtn {
+                    height: 10vh;
+                    width: 10vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #img {
+                    height: 10vh;
+                    width: 10vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        .botbar-sct {
+            height: 50%;
+            width: 100%;
+
+            .allbtn-sct {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                .btn-sct {
+                    display: flex;
+                    height: 100%;
+                    width: auto;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    
+                    #img{
+                        margin-right: 0.7vw;
+
+                        #btnImg {
+                            height: 5vh;
+                            width: auto;
+                        }
+                    }
+
+                    #label {
+
+                        p {
+                            font-family: 'Inter', sans-serif;
+                            font-weight: 400;
+                            font-size: 2vh;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .content-sct {
+        position: relative;
+        top: 20vh;
+        left: 0;
+        height: 1000vh;
+        width: 100vw;
+        background-color: #EFEFEF;
+        display: flex;
+        justify-content: center;
+    
+        .trend-sct {
+            width: 75vw;
+            height: auto;
+            background-color: #FFFFFF;
+            margin-top: 4vh;
+            border-radius: 2.5vh;
+    
+            .title-sct {
+                margin-top: 3vh;
+                margin-left: 2vw;
+                width: auto;
+                height: auto;
+    
+                p {
+                    margin: auto;
+                    font-family: 'Archivo', sans-serif;
+                    font-weight: 400;
+                    font-size: 2.25vh;
+                }
+            }
+    
+            .grid-sct {
+                width: 100vw;
+                height: auto;
+            }
+        }
+    }
+}
