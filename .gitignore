@@ -1,4 +1,5 @@
 /vendor
 .env
 /node_modules
+/front/node_modules
 phpunit.xml
