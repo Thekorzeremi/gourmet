@@ -88,7 +88,10 @@
                 <p>À la une de KOUIZINE</p>
             </div>
             <div class='grid-sct'>
-
+                <div class="art1"></div>
+                <div class="art2"></div>
+                <div class="art3"></div>
+                <div class="art4"></div>
             </div>
         </div>
     </div>
