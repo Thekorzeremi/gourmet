@@ -196,6 +196,18 @@ class DAO {
         }
     }
 
+    public function getRecetteByCategory($category) {
+        try {
+            $row = $this->bdd->prepare("SELECT * FROM Recette WHERE id_categorie = :category");
+            $row->bindParam(':category', $category, PDO::PARAM_INT);
+            $row->execute();
+            return $row->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Erreur lors de la récupération des recettes par catégorie " . $e->getMessage();
+            return [];
+        }
+    }
+
     public function getIngredient() {
         try {
             $row = $this->bdd->prepare("SELECT * FROM Ingredient");
@@ -203,6 +215,18 @@ class DAO {
             return $row->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             echo "Erreur lors de la récupération des ingredients " . $e->getMessage();
+            return [];
+        }
+    }
+
+    public function getIngredientByRecette($recette) {
+        try {
+            $row = $this->bdd->prepare("SELECT * FROM Ingredient WHERE id_recette = :recette");
+            $row->bindParam(':recette', $recette, PDO::PARAM_INT);
+            $row->execute();
+            return $row->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Erreur lors de la récupération des ingrédients par recette " . $e->getMessage();
             return [];
         }
     }
