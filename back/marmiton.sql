@@ -33,9 +33,12 @@ CREATE TABLE Ingredient (
     FOREIGN KEY (id_recette) REFERENCES Recette(id)
 );
 
-INSERT INTO Categorie (nom, img) VALUES ('Entrée', 'entree.png');
-INSERT INTO Categorie (nom, img) VALUES ('Plat principal', 'plat.png');
-INSERT INTO Categorie (nom, img) VALUES ('Dessert', 'dessert.png');
+INSERT INTO Categorie (nom, img) VALUES ('Entrée', 'https://cdn-icons-png.flaticon.com/512/8033/8033081.png');
+INSERT INTO Categorie (nom, img) VALUES ('Plat principal', 'https://cdn-icons-png.flaticon.com/512/1065/1065715.png');
+INSERT INTO Categorie (nom, img) VALUES ('Dessert', 'https://cdn-icons-png.flaticon.com/512/1888/1888907.png');
+INSERT INTO Categorie (nom, img) VALUES ('Burger', 'https://cdn-icons-png.flaticon.com/512/5787/5787016.png');
+INSERT INTO Categorie (nom, img) VALUES ('Japonais', 'https://cdn-icons-png.flaticon.com/512/6920/6920188.png');
+INSERT INTO Categorie (nom, img) VALUES ('Coréen', 'https://cdn-icons-png.flaticon.com/512/3978/3978806.png');
 
 
 INSERT INTO Recette (nom, img, etape1, etape2, etape3, etape4, id_categorie)
