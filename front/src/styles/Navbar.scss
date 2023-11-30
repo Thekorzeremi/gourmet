@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 .navbar-sct {
-    height: 30vh;
+    height: 20vh;
     width: 100vw;
     position: absolute;
     top: 0;
@@ -12,19 +14,59 @@
     .topbar-sct {
         height: 50%;
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
 
         .logo-sct {
+            height: 100%;
+            width: 15vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
+            p {
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                font-size: 4vh;
+            }
         }
 
         .search-sct {
-            
+            height: 100%;
+            width: 85vw;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            #searchbar {
+                height: 100%;
+                width: 85vw;
+                border: none;
+                outline: none;
+            }
+
+            #searchbtn {
+                height: 10vh;
+                width: 10vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 
     .botbar-sct {
         height: 50%;
         width: 100%;
+
+        .allbtn-sct {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
     }
 
 }
