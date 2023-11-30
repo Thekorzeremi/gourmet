@@ -1,5 +1,7 @@
 <?php 
 
+include 'config.php';
+
 class Categorie {
     private $nom;
 
@@ -87,13 +89,13 @@ class Recette {
 class Ingredient {
     private $nom;
     private $quantite;
-    private $img;
+    private $image;
     private $id_recette;
 
-    public function __construct($nom, $quantite, $img, $id_recette) {
+    public function __construct($nom, $quantite, $image, $id_recette) {
         $this->nom = $nom;
         $this->quantite = $quantite;
-        $this->img = $img;
+        $this->image = $image;
         $this->id_recette = $id_recette;
     }
 
@@ -105,13 +107,174 @@ class Ingredient {
         return $this->quantite;
     }
 
-    public function getImg() {
-        return $this->img;
+    public function getImage() {
+        return $this->image;
     }
 
     public function getId_recette() {
         return $this->id_recette;
     }
 }
+
+class DAO {
+    private $bdd;
+
+    public function __construct($bdd) {
+        $this->bdd = $bdd;
+    }
+
+    public function addCategorie($categorie) {
+        try {
+            $requete = $this->bdd->prepare('INSERT INTO Categorie (nom) VALUES (?)');
+            $requete->execute([
+                $categorie->getNom()
+            ]);
+            return true;
+        } catch (PDOException $e) {
+            echo "Erreur de l'ajout de la categorie : " . $e->getMessage();
+        }
+    }
+    
+    public function addRecette($recette) {
+        try {
+            $requete = $this->bdd->prepare('INSERT INTO Recette 
+                (nom, img, etape1, etape2, etape3, etape4, etape5, etape6, etape7, etape8, id_categorie) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+            $requete->execute([
+                $recette->getNom(),
+                $recette->getImage(),
+                $recette->getETape1(),
+                $recette->getETape2(),
+                $recette->getETape3(),
+                $recette->getETape4(),
+                $recette->getETape5(),
+                $recette->getETape6(),
+                $recette->getETape7(),
+                $recette->getETape8(),
+                $recette->getCategorie()
+            ]);
+            return true;
+        } catch (PDOException $e) {
+            echo "Erreur de l'ajout de la recette : " . $e->getMessage();
+        }
+    }
+    
+    public function addIngredient($ingredient) {
+        try {
+            $requete = $this->bdd->prepare('INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES (?, ?, ?, ?)');
+            $requete->execute([
+                $ingredient->getNom(),
+                $ingredient->getquantite(),
+                $ingredient->getimage(),
+                $ingredient->getId_recette()
+            ]);
+            return true;
+        } catch (PDOException $e) {
+            echo "Erreur de l'ajout de la ingredient : " . $e->getMessage();
+        }
+    }
+
+    public function getCategorie() {
+        try {
+            $row = $this->bdd->prepare("SELECT * FROM Categorie");
+            $row->execute();
+            return $row->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Erreur lors de la récupération des categories " . $e->getMessage();
+            return [];
+        }
+    }
+
+    public function getRecette() {
+        try {
+            $row = $this->bdd->prepare("SELECT * FROM Recette");
+            $row->execute();
+            return $row->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Erreur lors de la récupération des recettes " . $e->getMessage();
+            return [];
+        }
+    }
+
+    public function getIngredient() {
+        try {
+            $row = $this->bdd->prepare("SELECT * FROM Ingredient");
+            $row->execute();
+            return $row->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Erreur lors de la récupération des ingredients " . $e->getMessage();
+            return [];
+        }
+    }
+
+    public function updateCategorie($id, $categorie) {
+        try {
+            $row = $this->bdd->prepare("UPDATE Categorie SET nom = ? WHERE id = ?");
+            $row->execute([$categorie->getNom(), $id]);
+            return true;
+        } catch (PDOException $e) {
+            echo "Erreur lors de la modification du cate$categorie " . $e->getMessage();
+            return false;
+        }
+    }
+
+    public function updateRecette($id, $recette) {
+        try {
+            $row = $this->bdd->prepare("UPDATE Recette SET nom = ?, img = ?, etape1 = ?, etape2 = ?, etape3 = ?, etape4 = ?, etape5 = ?, etape6 = ?, etape7 = ?, etape8 = ?, id_categorie = ? WHERE id = ?");
+            $row->execute([$recette->getNom(), $recette->getImage(), $recette->getEtape1(), $recete->getEtape2(), $recete->getEtape3(), $recete->getEtape4(), $recete->getEtape5(), $recete->getEtape6(), $recete->getEtape7(), $recete->getEtape8(), $recete->getCategorie(), $id]);
+            return true;
+        } catch (PDOException $e) {
+            echo "Erreur lors de la modification de la recette : " . $e->getMessage();
+            return false;
+        }
+    }
+
+    public function updateIngredient($id, $ingredient) {
+        try {
+            $row = $this->bdd->prepare("UPDATE Ingredient SET nom = ?, quantite = ?, img = ?, id_recette = ? WHERE id = ?");
+            $row->execute([$ingredient->getNom(), $ingredient->getQuantite(), $ingredient->getImage(), $ingredient->getId_recette(), $id]);
+            return true;
+        } catch (PDOException $e) {
+            echo "Erreur lors de la modification du ingredient " . $e->getMessage();
+            return false;
+        }
+    }
+
+    public function removeCategorieById($id) {
+        try {
+            $row = $this->bdd->prepare("DELETE FROM Categorie WHERE id = ?");
+            $row->execute([$id]);
+        } catch (PDOException $e) {
+            echo "Erreur lors de la suppression du personnage " . $e->getMessage();
+        }
+    }
+
+    public function removeRecetteById($id) {
+        try {
+            $row = $this->bdd->prepare("DELETE FROM Recette WHERE id = ?");
+            $row->execute([$id]);
+        } catch (PDOException $e) {
+            echo "Erreur lors de la suppression du personnage " . $e->getMessage();
+        }
+    }
+
+    public function removeIngredientById($id) {
+        try {
+            $row = $this->bdd->prepare("DELETE FROM Ingredient WHERE id = ?");
+            $row->execute([$id]);
+        } catch (PDOException $e) {
+            echo "Erreur lors de la suppression du personnage " . $e->getMessage();
+        }
+    }
+}
+
+$DAO = new DAO($bdd);
+// $burger = new Recette("Burger", "img.com", "Coupe", "Cuit", "Presente", "", "", "", "", "", 1);
+// $ail = new Ingredient("Ail", 15, "ail.png", 1);
+// $DAO->addIngredient($ail);
+
+print_r($DAO->getCategorie());
+$newCat = new Categorie("Sushi");
+$DAO->updateCategorie(1, $newCat);
 
 ?>
