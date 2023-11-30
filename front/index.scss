@@ -44,35 +44,37 @@ body {
             }
 
             .search-sct {
-                height: 3.5rem;
-                width: 40vw;
-                margin: 1rem;
+                position: relative;
+                height: 6vh;
+                width: auto;
+                margin: 1rem 3rem 1rem 1rem;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 
                 #searchbar {
                     height: 100%;
-                    width: 75vw;
+                    width: 20vw;
                     border: none;
                     outline: none;
-                    background-color: #EFEFEF;
                     border-radius: 2rem;
                     padding-left: 2rem;
                     font-size: 1.1rem;
                 }
 
                 #searchbtn {
-                    height: 10vh;
-                    width: 10vh;
+                    height: 2vh;
+                    width: 2vh;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                 }
 
                 #img {
-                    height: 10vh;
-                    width: 10vw;
+                    position: absolute;
+                    left: -.5rem;
+                    height: 2rem;
+                    width: 2rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;

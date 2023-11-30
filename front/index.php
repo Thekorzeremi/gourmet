@@ -15,7 +15,7 @@
                     <p>KOUIZINE</p>
                 </div>
                 <div class="search-sct">
-                    <input type="search" name="searchbar" id="searchbar" placeholder='Je cherche des recettes, des ingrédients...'/>
+                    <input type="search" name="searchbar" id="searchbar" placeholder='Des recettes, des ingrédients...'/>
                     <div id="searchbtn"></div>
                     <div id="img">
                         <img src='assets/search-icon.svg'></img>
