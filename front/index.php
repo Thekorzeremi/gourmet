@@ -54,7 +54,12 @@
                 <p>À la une de KOUIZINE</p>
             </div>
             <div class='grid-sct'>
-
+                <div class="grid">
+                    <div class="grid1"></div>
+                    <div class="grid2"></div>
+                    <div class="grid3"></div>
+                    <div class="grid4"></div>
+                </div>
             </div>
         </div>
     </div>

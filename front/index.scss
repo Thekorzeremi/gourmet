@@ -141,10 +141,12 @@ body {
     
         .trend-sct {
             width: 75vw;
-            height: auto;
+            height: 75vh;
             background-color: #FFFFFF;
             margin-top: 4vh;
             border-radius: 2.5vh;
+            display: flex;
+            flex-direction: column;
     
             .title-sct {
                 margin-top: 3vh;
@@ -159,11 +161,58 @@ body {
                     font-size: 2.25vh;
                 }
             }
-    
+
             .grid-sct {
-                width: 100vw;
-                height: auto;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .grid {
+                    display: grid; 
+                    grid-template-rows: 1fr 1fr 1fr;
+                    grid-template-columns: 1fr 1fr;
+                    width: 95%;
+                    gap: 0px;
+                    height: 95%;
+    
+                    .grid1 {
+                        background-color: #C6DCDA; 
+                        grid-row-start: 1;
+                        grid-column-start: 1;
+                        grid-row-end: 4;
+                        grid-column-end: 2;
+                    }
+    
+                    .grid2 {
+                        background-color: #DDD9BD; 
+                        grid-row-start: 1;
+                        grid-column-start: 2;
+                        grid-row-end: 2;
+                        grid-column-end: 3;
+                    }
+                    
+                    .grid3 {
+                        background-color: #56EF98; 
+                        grid-row-start: 2;
+                        grid-column-start: 2;
+                        grid-row-end: 3;
+                        grid-column-end: 3;
+                    }
+                    
+                    .grid4 {
+                        background-color: #7DCF87; 
+                        grid-row-start: 3;
+                        grid-column-start: 2;
+                        grid-row-end: 4;
+                        grid-column-end: 3;
+                    }
+            
+                }
+            
             }
+    
         }
     }
 }
