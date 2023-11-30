@@ -51,7 +51,7 @@
     <div class="content-sct">
         <div class="trend-sct">
             <div class='title-sct'>
-                <p>À la une de KOUIZINE</p>
+                <h2>À la une de KOUIZINE 🍴</h2>
             </div>
             <div class='grid-sct'>
                 <div class="grid">
@@ -62,6 +62,20 @@
                 </div>
             </div>
         </div>
+        <div class="you-sct">
+            <div class="title-sct">
+                <h2>Recommandés pour vous 😍</h2>
+            </div>
+            <div class="grid-sct">
+                <div class="grid">
+                    <div class="grid1"></div>
+                    <div class="grid2"></div>
+                    <div class="grid3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="aux3"></div>
+        <div class="all-sct"></div>
     </div>
 </body>
 </html>
