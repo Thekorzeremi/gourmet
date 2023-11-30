@@ -272,9 +272,4 @@ $DAO = new DAO($bdd);
 // $burger = new Recette("Burger", "img.com", "Coupe", "Cuit", "Presente", "", "", "", "", "", 1);
 // $ail = new Ingredient("Ail", 15, "ail.png", 1);
 // $DAO->addIngredient($ail);
-
-print_r($DAO->getCategorie());
-$newCat = new Categorie("Sushi");
-$DAO->updateCategorie(1, $newCat);
-
 ?>
