@@ -221,7 +221,7 @@ class DAO {
     public function updateRecette($id, $recette) {
         try {
             $row = $this->bdd->prepare("UPDATE Recette SET nom = ?, img = ?, etape1 = ?, etape2 = ?, etape3 = ?, etape4 = ?, etape5 = ?, etape6 = ?, etape7 = ?, etape8 = ?, id_categorie = ? WHERE id = ?");
-            $row->execute([$recette->getNom(), $recette->getImage(), $recette->getEtape1(), $recete->getEtape2(), $recete->getEtape3(), $recete->getEtape4(), $recete->getEtape5(), $recete->getEtape6(), $recete->getEtape7(), $recete->getEtape8(), $recete->getCategorie(), $id]);
+            $row->execute([$recette->getNom(), $recette->getImage(), $recette->getEtape1(), $recette->getEtape2(), $recette->getEtape3(), $recette->getEtape4(), $recette->getEtape5(), $recette->getEtape6(), $recette->getEtape7(), $recette->getEtape8(), $recette->getCategorie(), $id]);
             return true;
         } catch (PDOException $e) {
             echo "Erreur lors de la modification de la recette : " . $e->getMessage();
