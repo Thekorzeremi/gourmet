@@ -4,7 +4,8 @@ USE marmiton;
 
 CREATE TABLE Categorie (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(255)
+    nom VARCHAR(255),
+    img VARCHAR(255)
 );
 
 CREATE TABLE Recette (
@@ -32,9 +33,9 @@ CREATE TABLE Ingredient (
     FOREIGN KEY (id_recette) REFERENCES Recette(id)
 );
 
-INSERT INTO Categorie (nom) VALUES ('Entrée');
-INSERT INTO Categorie (nom) VALUES ('Plat principal');
-INSERT INTO Categorie (nom) VALUES ('Dessert');
+INSERT INTO Categorie (nom, img) VALUES ('Entrée', 'entree.png');
+INSERT INTO Categorie (nom, img) VALUES ('Plat principal', 'plat.png');
+INSERT INTO Categorie (nom, img) VALUES ('Dessert', 'dessert.png');
 
 
 INSERT INTO Recette (nom, img, etape1, etape2, etape3, etape4, id_categorie)

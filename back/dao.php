@@ -4,13 +4,19 @@ include 'config.php';
 
 class Categorie {
     private $nom;
+    private $image;
 
-    public function __construct($nom) {
+    public function __construct($nom, $image) {
         $this->nom = $nom;
+        $this->image = $image;
     }
 
     public function getNom() {
         return $this->nom;
+    }
+
+    public function getImage() {
+        return $this->image;
     }
 }
 
@@ -125,9 +131,10 @@ class DAO {
 
     public function addCategorie($categorie) {
         try {
-            $requete = $this->bdd->prepare('INSERT INTO Categorie (nom) VALUES (?)');
+            $requete = $this->bdd->prepare('INSERT INTO Categorie (nom, img) VALUES (?, ?)');
             $requete->execute([
-                $categorie->getNom()
+                $categorie->getNom(),
+                $categorie->getImage()
             ]);
             return true;
         } catch (PDOException $e) {

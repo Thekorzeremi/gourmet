@@ -1,3 +1,5 @@
+<?php include '../back/dao.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,62 +24,26 @@
             </div>
             <div class="botbar-sct">
                 <div class="allbtn-sct">
-                    <div class="btn-sct">
-                        <div id="img">
-                            <img src='assets/salade.png' id='btnImg'></img>
-                        </div>
-                        <div id="label">
-                            <p>Salades</p>
-                        </div>
-                    </div>
-                    <div class="btn-sct">
-                        <div id="img">
-                            <img src='assets/pizza.png' id='btnImg'></img>
-                        </div>
-                        <div id="label">
-                            <p>Pizzas</p>
-                        </div>
-                    </div>
-                    <div class="btn-sct">
-                        <div id="img">
-                            <img src='assets/burger.png' id='btnImg'></img>
-                        </div>
-                        <div id="label">
-                            <p>Burgers</p>
-                        </div>
-                    </div>
-                    <div class="btn-sct">
-                        <div id="img">
-                            <img src='assets/bbk.png' id='btnImg'></img>
-                        </div>
-                        <div id="label">
-                            <p>Barbecue</p>
-                        </div>
-                    </div>
-                    <div class="btn-sct">
-                        <div id="img">
-                            <img src='assets/donut.png' id='btnImg'></img>
-                        </div>
-                        <div id="label">
-                            <p>Donuts</p>
-                        </div>
-                    </div>
-                    <div class="btn-sct">
-                        <div id="img">
-                            <img src='assets/glace.png' id='btnImg'></img>
-                        </div>
-                        <div id="label">
-                            <p>Glaces</p>
-                        </div>
-                    </div>
-                    <div class="btn-sct">
-                        <div id="img">
-                            <img src='assets/boisson.png' id='btnImg'></img>
-                        </div>
-                        <div id="label">
-                            <p>Boissons</p>
-                        </div>
-                    </div>
+                    <?php
+                    $categories = $DAO->getCategorie();
+                    $counter = 0;
+
+                    foreach ($categories as $categorie) {
+                        if ($counter < 6) {
+                            echo '<div class="btn-sct">';
+                            echo '<div id="img">';
+                            echo "<img src='{$categorie['img']}' id='btnImg'></img>";
+                            echo '</div>';
+                            echo '<div id="label">';
+                            echo "<p>{$categorie['nom']}</p>";
+                            echo '</div>';
+                            echo '</div>';       
+                            $counter++;
+                        } else {
+                            break;
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>
