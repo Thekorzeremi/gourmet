@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Inter&display=swap');
+
+body {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  
+      .navbar-sct {
+          height: 20vh;
+          width: 100vw;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 999;
+          background-color: #FFF;
+          display: flex;
+          flex-direction: column;
+  
+          .topbar-sct {
+              height: 50%;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+  
+              .logo-sct {
+                  height: 100%;
+                  width: 15vw;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: 700;
+                  font-size: 4vh;
+
+                  a {
+                    text-decoration: none;
+                    color: black;
+                  }
+  
+                  &:hover {
+                      cursor: default;
+                  }
+              }
+  
+              .search-sct {
+                  position: relative;
+                  height: 6vh;
+                  width: auto;
+                  margin: 1rem 3rem 1rem 1rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  
+                  #searchbar {
+                      height: 100%;
+                      width: 20vw;
+                      border: none;
+                      outline: none;
+                      border-radius: 2rem;
+                      padding-left: 2rem;
+                      font-size: 1.1rem;
+                  }
+  
+                  #searchbtn {
+                      height: 2vh;
+                      width: 2vh;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                  }
+  
+                  #img {
+                      position: absolute;
+                      left: -.5rem;
+                      height: 2rem;
+                      width: 2rem;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                  }
+              }
+          }
+  
+          .botbar-sct {
+              height: 50%;
+              width: 100%;
+  
+              .allbtn-sct {
+                  height: 100%;
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-around;
+  
+                  .btn-sct {
+                      display: flex;
+                      height: 70%;
+                      width: auto;
+                      justify-content: center;
+                      align-items: center;
+                      transition: all .3s ease-in-out;
+  
+                      &:hover {
+                          cursor: pointer;
+                          transform: scale(1.03);
+                      }
+                      
+                      #img{
+                          margin-right: 0.7vw;
+  
+                          #btnImg {
+                              height: 5vh;
+                              width: auto;
+                          }
+                      }
+  
+                      #label {
+  
+                          p {
+                              font-family: 'Inter', sans-serif;
+                              font-weight: 400;
+                              font-size: 2vh;
+                          }
+                      }
+                  }
+              }
+          }
+          
+      }
+
+      .content-sct {
+        position: relative;
+        top: 20vh;
+        left: 0;
+        height: auto;
+        width: 100vw;
+        background-color: #EFEFEF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .search-sct {
+            width: 75vw;
+            height: auto;
+            background-color: #FFFFFF;
+            margin-top: 4vh;
+            border-radius: 2.5vh;
+            display: flex;
+            flex-direction: column;
+
+            .title-sct {
+                margin-top: 3vh;
+                margin-left: 2vw;
+                width: auto;
+                height: auto;
+
+                h2 {
+                    margin: 0;
+                    // font-family: 'Archivo', sans-serif;
+                    font-weight: 700;
+                }
+            }
+            .grid-sct {
+                height: auto;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+
+                .grid {
+                    display: flex;
+                    flex-wrap: wrap; 
+                    justify-content: space-evenly;
+                    // grid-template-rows: 1fr 1fr 1fr;
+                    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                    width: 100%;
+                    gap: 0px;
+                    height: 100%;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    margin-bottom: auto;
+
+                    .grid {
+                        height: 40vh;
+                        width: 17vw;
+                        margin-left: 0;
+                        margin-top: 0;
+                        margin-right: 0;
+                        margin-bottom: 2vh;
+                        background-color: grey;
+
+                        #id {}
+                        #name {}
+                    }
+                }
+            }
+        }        
+      }
+}
