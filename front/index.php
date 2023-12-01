@@ -89,7 +89,35 @@
                 </div>
             </div>
         </div>
-        <div class="all-sct"></div>
+        <div class="all-sct">
+            <div class="title-sct">
+                <h2>Toutes nos recettes 📔</h2>
+            </div>
+            <div class="grid-sct">
+                <div class="grid">
+                    <?php
+                    $recettes = $DAO->getRecette();
+                    $counter = 0;
+
+                    foreach ($recettes as $recette) {
+                        if ($counter < 999) {
+                            echo '<div class="recette-sct">';
+                            echo '<div id="img">';
+                            echo "<img src='{$recette['img']}' id='btnImg'></img>";
+                            echo '</div>';
+                            echo '<div id="name">';
+                            echo "<p>{$recette['nom']}</p>";
+                            echo '</div>';
+                            echo '</div>';
+                            $counter++;
+                        } else {
+                            break;
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

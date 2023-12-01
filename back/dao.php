@@ -297,6 +297,17 @@ class DAO {
             echo "Erreur lors de la suppression du personnage " . $e->getMessage();
         }
     }
+
+    public function searchRecette($input) {
+        try {
+            $row = $this->bdd->prepare("SELECT * FROM recette WHERE input = ?");
+            $row2 = $this->bdd->prepare("SELECT * FROM ingredient WHERE input = ?"); 
+            $row->execute([$input]);
+            $row2->execute([$input]);
+        } catch (PDOException $e) {
+            echo "Erreur lors de la recherche " . $e->getMessage();
+        }
+    }
 }
 
 $DAO = new DAO($bdd);
