@@ -10,6 +10,7 @@ body {
   position: absolute;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
+  overflow-x: hidden;
 
     .navbar-sct {
         height: 20vh;
@@ -37,6 +38,11 @@ body {
                 justify-content: center;
                 font-weight: 700;
                 font-size: 4vh;
+                
+                &a {
+                    color: black;
+                    text-decoration: none;
+                }
 
                 &:hover {
                     cursor: default;
@@ -139,13 +145,14 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        cursor: default;
     
         .trend-sct {
             width: 75vw;
             height: 75vh;
             background-color: #FFFFFF;
             margin-top: 4vh;
-            border-radius: 2.5vh;
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
     
@@ -170,47 +177,106 @@ body {
                 align-items: center;
 
                 .grid {
-                    display: grid; 
+                    display: grid;
                     grid-template-rows: 1fr 1fr 1fr;
                     grid-template-columns: 1fr 1fr;
                     width: 95%;
                     gap: 0px;
                     height: 95%;
-                    
-                    &:hover {
-                        cursor: pointer;
+                    cursor: pointer;
+                }
+                
+                #img {
+                    margin: 1rem;
+                    height: 70%;
+                    width: auto;
+                    max-width: 90%;
+                    position: relative;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 5px;
+                
+                    img {
+                        object-fit: cover;
                     }
-    
+                }
+
+                    #name {
+                        margin: 0rem 1rem;
+                    }
+                    
                     .grid1 {
-                        background-color: #C6DCDA; 
                         grid-row-start: 1;
                         grid-column-start: 1;
                         grid-row-end: 4;
                         grid-column-end: 2;
+                        max-height: 60vh;
+                        transition: all .3s ease-in-out;
+
+                        #img {
+                            height: 25rem;
+                            width: auto;
+                            max-width: 95%;
+                            position: relative;
+                            overflow: hidden;
+                            display: flex;
+                            align-items: start;
+
+                            img {
+                                object-fit: cover;
+                            }
+
+                        }
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
+
+                        #name {
+                            margin: 1rem;
+                            font-size: 1.5rem;
+                        }
                     }
     
                     .grid2 {
-                        background-color: #DDD9BD; 
                         grid-row-start: 1;
                         grid-column-start: 2;
                         grid-row-end: 2;
                         grid-column-end: 3;
+                        max-height: 20vh;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }
                     
                     .grid3 {
-                        background-color: #56EF98; 
                         grid-row-start: 2;
                         grid-column-start: 2;
                         grid-row-end: 3;
                         grid-column-end: 3;
+                        max-height: 20vh;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }
                     
                     .grid4 {
-                        background-color: #7DCF87; 
                         grid-row-start: 3;
                         grid-column-start: 2;
                         grid-row-end: 4;
                         grid-column-end: 3;
+                        max-height: 20vh;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }
             
                 }
@@ -221,10 +287,10 @@ body {
 
         .you-sct {
             width: 75vw;
-            height: 75vh;
+            height: 65vh;
             background-color: #FFFFFF;
             margin-top: 4vh;
-            border-radius: 2.5vh;
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
 
@@ -258,32 +324,66 @@ body {
                     gap: 0px;
                     height: 95%;
 
-                    &:hover {
-                        cursor: pointer;
+                    #grid {
+                        #img {
+                            border-radius: 7px;
+                            height: 25rem;
+                            width: auto;
+                            margin: 1rem;
+                            overflow: hidden;
+                            display: flex;
+                            align-items: start;
+                            justify-content: center;
+                            cursor: pointer;
+
+                            img {
+                                object-fit: cover
+                            }
+                        }
+
+                        #name {
+                            margin: 1rem;
+                            font-size: 1.3rem;
+                        }
                     }
     
                     .grid1 {
-                        background-color: #C6DCDA; 
                         grid-row-start: 1;
                         grid-column-start: 1;
                         grid-row-end: 4;
                         grid-column-end: 2;
+                        max-width: 24vw;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }
     
                     .grid2 {
-                        background-color: #DDD9BD; 
                         grid-row-start: 1;
                         grid-column-start: 2;
                         grid-row-end: 1;
                         grid-column-end: 3;
+                        max-width: 24vw;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }
                     
                     .grid3 {
-                        background-color: #56EF98; 
                         grid-row-start: 1;
                         grid-column-start: 3;
                         grid-row-end: 1;
                         grid-column-end: 3;
+                        max-width: 24vw;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }   
     
                 }
@@ -296,10 +396,10 @@ body {
 
         .fav-sct {
             width: 75vw;
-            height: 150vh;
+            height: 140vh;
             background-color: #FFFFFF;
             margin-top: 4vh;
-            border-radius: 2.5vh;
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
 
@@ -333,56 +433,106 @@ body {
                     gap: 0px;
                     height: 95%;
 
-                    &:hover {
-                        cursor: pointer;
+                    #grid {
+                        #img {
+                            height: 75%;
+                            width: auto;
+                            margin: 1rem;
+                            overflow: hidden;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        #name {
+                            margin: 1rem;
+                            font-size: 1.3rem;
+                        }
                     }
     
                     .grid1 {
-                        background-color: #C6DCDA; 
                         grid-row-start: 1;
                         grid-column-start: 1;
                         grid-row-end: 2;
                         grid-column-end: 10;
+                        max-height: 25rem;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }
     
                     .grid2 {
-                        background-color: #DDD9BD; 
                         grid-row-start: 2;
                         grid-column-start: 1;
                         grid-row-end: 3;
                         grid-column-end: 4;
+                        max-height: 25rem;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }
                     
                     .grid3 {
-                        background-color: #56EF98; 
                         grid-row-start: 2;
                         grid-column-start: 4;
                         grid-row-end: 3;
                         grid-column-end: 7;
+                        max-height: 25rem;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }   
 
                     .grid4 {
-                        background-color: #C6DCDA; 
                         grid-row-start: 2;
                         grid-column-start: 7;
                         grid-row-end: 3;
                         grid-column-end: 10;
+                        max-height: 25rem;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
+                    
                     }
     
                     .grid5 {
-                        background-color: #DDD9BD; 
                         grid-row-start: 3;
                         grid-column-start: 1;
                         grid-row-end: 4;
                         grid-column-end: 5;
+                        max-height: 25rem;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }
                     
                     .grid6 {
-                        background-color: #56EF98; 
                         grid-row-start: 3;
                         grid-column-start: 5;
                         grid-row-end: 4;
                         grid-column-end: 10;
+                        max-height: 25rem;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }  
     
                 }
@@ -396,7 +546,7 @@ body {
             height: auto;
             background-color: #FFFFFF;
             margin-top: 4vh;
-            border-radius: 2.5vh;
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
 
@@ -436,17 +586,35 @@ body {
                     }
                     margin-bottom: auto;
 
-                    #recette {
-                        height: 40vh;
+                    .recette-sct {
+                        height: 35vh;
                         width: 17vw;
                         margin-left: 0;
                         margin-top: 0;
                         margin-right: 0;
                         margin-bottom: 2vh;
-                        background-color: grey;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
+
+                        #img {
+                            height: 80%;
+                            width: auto;
+                            margin: 1rem;
+                            overflow: hidden;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 5px;
+                        }
+
+                        #name {
+                            margin: 1rem;
+                        }
                     }
                 }
             }
         }
     }
-}

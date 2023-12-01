@@ -42,14 +42,14 @@ INSERT INTO Categorie (nom, img) VALUES ('Coréen', 'https://cdn-icons-png.flati
 
 
 INSERT INTO Recette (nom, img, etape1, etape2, etape3, etape4, id_categorie)
-VALUES ('Salade César', 'cesar.jpg', 'Laver les feuilles de laitue...', 'Préparer la sauce avec de la mayonnaise...', 'Mélanger le tout et servir.', NULL, 1);
+VALUES ('Salade César', 'https://assets.afcdn.com/recipe/20190704/94709_w600.jpg', 'Laver les feuilles de laitue...', 'Préparer la sauce avec de la mayonnaise...', 'Mélanger le tout et servir.', NULL, 1);
 
 INSERT INTO Recette (nom, img, etape1, etape2, etape3, etape4, id_categorie)
-VALUES ('Poulet rôti', 'poulet_roti.jpg', 'Préchauffer le four...', 'Assaisonner le poulet...', 'Cuire au four pendant 1 heure.', NULL, 2);
+VALUES ('Poulet rôti', 'https://assets.afcdn.com/recipe/20130909/63747_w1024h768c1cx1872cy2808.jpg', 'Préchauffer le four...', 'Assaisonner le poulet...', 'Cuire au four pendant 1 heure.', NULL, 2);
 
 
 INSERT INTO Recette (nom, img, etape1, etape2, etape3, etape4, etape5, etape6, etape7, etape8, id_categorie)
-VALUES ('Tarte aux pommes', 'tarte_pommes.jpg', 'Préparer la pâte...', 'Éplucher et couper les pommes...', 'Cuire au four pendant 30 minutes.', NULL, NULL, NULL, NULL, NULL, 3);
+VALUES ('Tarte aux pommes', 'https://assets.afcdn.com/recipe/20230127/139908_w600.jpg', 'Préparer la pâte...', 'Éplucher et couper les pommes...', 'Cuire au four pendant 30 minutes.', NULL, NULL, NULL, NULL, NULL, 3);
 
 
 INSERT INTO Ingredient (nom, quantite, img, id_recette) 
@@ -61,15 +61,15 @@ VALUES ('Poulet', '1 kg', 'poulet.jpg', 2);
 INSERT INTO Ingredient (nom, quantite, img, id_recette) 
 VALUES ('Pommes', '4', 'pommes.jpg', 3);
 
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Dinde','dinde.jpg',2);
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','alligot.jpg',2);
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Sushi Maki','sushi.jpg',2);
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Tiramisu','tiramisu.jpg',2);
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Dinde','dinde.jpg',2);
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','alligot.jpg',2);
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Sushi Maki','sushi.jpg',2);
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Tiramisu','tiramisu.jpg',2);
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Dinde','dinde.jpg',2);
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','alligot.jpg',2);
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Sushi Maki','sushi.jpg',2);
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Tiramisu','tiramisu.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Dinde','https://assets.afcdn.com/recipe/20180209/77491_w600.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','https://assets.afcdn.com/recipe/20191231/105959_w600.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Sushi Maki','https://assets.afcdn.com/recipe/20131025/16373_w600.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Tiramisu','https://assets.afcdn.com/recipe/20170614/69362_w600.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Dinde','https://assets.afcdn.com/recipe/20180209/77491_w600.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','https://assets.afcdn.com/recipe/20191231/105959_w600.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Sushi Maki','https://assets.afcdn.com/recipe/20131025/16373_w600.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Tiramisu','https://assets.afcdn.com/recipe/20170614/69362_w600.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Dinde','https://assets.afcdn.com/recipe/20180209/77491_w600.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','https://assets.afcdn.com/recipe/20191231/105959_w600.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Sushi Maki','https://assets.afcdn.com/recipe/20131025/16373_w600.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Tiramisu','https://assets.afcdn.com/recipe/20170614/69362_w600.jpg',2);

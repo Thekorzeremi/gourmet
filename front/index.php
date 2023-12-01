@@ -12,7 +12,7 @@
     <div class="navbar-sct">
             <div class="topbar-sct">
                 <div class="logo-sct">
-                    <p>🍴 KOUIZINE</p>
+                    <a href="./">🍴 KOUIZINE</a>
                 </div>
                 <div class="search-sct">
                     <form action="search.php" method="post">
@@ -32,12 +32,13 @@
                     foreach ($categories as $categorie) {
                         if ($counter < 6) {
                             echo '<div class="btn-sct">';
-                            echo '<div id="img">';
-                            echo "<img src='{$categorie['img']}' id='btnImg'></img>";
-                            echo '</div>';
-                            echo '<div id="label">';
-                            echo "<p>{$categorie['nom']}</p>";
-                            echo '</div>';
+                            echo '<a href="categorie.php?id=' . ($counter + 1) . '" style="color: black; text-decoration: none;">';
+                                echo '<div id="img">';
+                                    echo "<img src='{$categorie['img']}' id='btnImg'></img>";
+                                echo '</div>';
+                                echo '<div id="label">';
+                                    echo "<p>{$categorie['nom']}</p>";
+                                echo '</div>';
                             echo '</div>';       
                             $counter++;
                         } else {
