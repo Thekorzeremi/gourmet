@@ -134,7 +134,7 @@ body {
         position: relative;
         top: 20vh;
         left: 0;
-        height: 1000vh;
+        height: auto;
         width: 100vw;
         background-color: #EFEFEF;
         display: flex;
@@ -337,7 +337,7 @@ body {
 
                         #name {
                             margin: 1rem;
-                            font-size: 1.4rem;
+                            font-size: 1.3rem;
                         }
                     }
     
@@ -390,7 +390,7 @@ body {
 
         .fav-sct {
             width: 75vw;
-            height: 150vh;
+            height: 140vh;
             background-color: #FFFFFF;
             margin-top: 4vh;
             border-radius: 10px;
@@ -440,7 +440,7 @@ body {
 
                         #name {
                             margin: 1rem;
-                            font-size: 1.5rem;
+                            font-size: 1.3rem;
                         }
                     }
     
@@ -449,7 +449,7 @@ body {
                         grid-column-start: 1;
                         grid-row-end: 2;
                         grid-column-end: 10;
-                        max-height: 27rem;
+                        max-height: 25rem;
                     }
     
                     .grid2 {
@@ -457,7 +457,7 @@ body {
                         grid-column-start: 1;
                         grid-row-end: 3;
                         grid-column-end: 4;
-                        max-height: 27rem;
+                        max-height: 25rem;
                     }
                     
                     .grid3 {
@@ -465,7 +465,7 @@ body {
                         grid-column-start: 4;
                         grid-row-end: 3;
                         grid-column-end: 7;
-                        max-height: 27rem;
+                        max-height: 25rem;
                     }   
 
                     .grid4 {
@@ -473,7 +473,7 @@ body {
                         grid-column-start: 7;
                         grid-row-end: 3;
                         grid-column-end: 10;
-                        max-height: 27rem;
+                        max-height: 25rem;
                     
                     }
     
@@ -482,7 +482,7 @@ body {
                         grid-column-start: 1;
                         grid-row-end: 4;
                         grid-column-end: 5;
-                        max-height: 27rem;
+                        max-height: 25rem;
                     }
                     
                     .grid6 {
@@ -490,7 +490,7 @@ body {
                         grid-column-start: 5;
                         grid-row-end: 4;
                         grid-column-end: 10;
-                        max-height: 27rem;
+                        max-height: 25rem;
                     }  
     
                 }
@@ -501,7 +501,7 @@ body {
 
         .all-sct {
             width: 75vw;
-            height: 150vh;
+            height: auto;
             background-color: #FFFFFF;
             margin-top: 4vh;
             border-radius: 10px;
@@ -512,7 +512,7 @@ body {
                 margin-top: 3vh;
                 margin-left: 2vw;
                 width: auto;
-                height: auto;
+                height: 7vh;
     
                 h2 {
                     margin: 0;
@@ -522,20 +522,37 @@ body {
             }
 
             .grid-sct {
-                height: 100%;
+                height: auto;
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-            
+                margin: 0;
             
                 .grid {
-                    display: grid; 
-                    grid-template-rows: 1fr 1fr 1fr;
-                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-                    width: 95%;
+                    display: flex;
+                    flex-wrap: wrap; 
+                    justify-content: space-evenly;
+                    // grid-template-rows: 1fr 1fr 1fr;
+                    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                    width: 100%;
                     gap: 0px;
-                    height: 95%;
+                    height: 100%;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    margin-bottom: auto;
+
+                    #recette {
+                        height: 40vh;
+                        width: 17vw;
+                        margin-left: 0;
+                        margin-top: 0;
+                        margin-right: 0;
+                        margin-bottom: 2vh;
+                        background-color: grey;
+                    }
                 }
             }
         }
