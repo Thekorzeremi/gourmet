@@ -203,6 +203,17 @@ class DAO {
         }
     }
 
+    public function getRecetteById($id) {
+        try {
+            $row = $this->bdd->prepare("SELECT * FROM Recette WHERE id = :id");
+            $row->bindParam(':id', $id, PDO::PARAM_INT);
+            $row->execute();
+            return $row->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Erreur lors de la récupération de la recette par id " . $e->getMessage();
+        }
+    }
+
     public function getRecetteByCategory($category) {
         try {
             $row = $this->bdd->prepare("SELECT * FROM Recette WHERE id_categorie = :category");

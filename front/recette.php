@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🙍🏻‍♀️ KOUIZINE</title>
-    <link rel="stylesheet" href="search.scss">
+    <link rel="stylesheet" href="recette.scss">
 </head>
 <body>
     <div class="navbar-sct">
@@ -55,31 +55,27 @@
     </div>
     <div class="content-sct">
         <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                if (isset($_POST["searchbar"])) {
-                    $searchValue = $_POST["searchbar"];
-                    echo "<div class='search-sct'>";
-                    echo "<div class='title-sct'>";
-                    echo "<h2>Résultats de la recherche 🔍</h2>";
-                    echo "</div>";
-                    echo "<div class='grid-sct'>";
-                    echo "<div class='grid'>";
-                    $recherche = $DAO->search($searchValue);
-                    foreach ($recherche as $resultat) {
-                        echo "<div class='grid'>";
-                        echo '<a class="link" href="recette.php?id=' . $resultat['id'] . '" style="color: black; text-decoration: none;">';
-                        echo "<div id='img'><img src='{$resultat['img']}'></img></div>";
-                        echo "<div id='name'><p>{$resultat['nom']}</p>";
-                        echo "</div>";
-                        echo "</div>";
-                    }
-                        
-                    echo "</div>";
-                    echo "</div>";
-                    echo "</div>";
+            $idR  = $_GET['id'];
+            $recettes = $DAO->getRecetteById($idR);
+            $ingredients = $DAO->getIngredientByRecette($idR);
+            foreach ($recettes as $recette) {
+                echo '<div id="img">';
+                echo "<img src='{$recette['img']}' id='btnImg'></img>";
+                echo '</div>';
+                echo '<div id="label">';
+                echo "<p>{$recette['nom']}</p>";
+                echo '</div>';
+                echo "<h2>Ingrédients</h2>";
+                foreach ($ingredients as $ing) {
+                    echo "<img src={$ing['img']}>";
+                    echo "<p>{$ing['quantite']}  {$ing['nom']}</p>";
                 }
-            } else {
-                echo "Le formulaire n'a pas été soumis en méthode POST.";
+                echo "<h2>Préparation</h2>";
+                for ($i = 0; $i < 8; $i++) {
+                    if ($recette['etape' . $i] != null) {
+                        echo "<p>{$recette['etape' . $i]}</p>";
+                    }
+                }
             }
         ?>
     </div>

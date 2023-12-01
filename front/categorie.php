@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🙍🏻‍♀️ KOUIZINE</title>
-    <link rel="stylesheet" href="search.scss">
+    <link rel="stylesheet" href="categorie.scss">
 </head>
 <body>
     <div class="navbar-sct">
@@ -55,32 +55,25 @@
     </div>
     <div class="content-sct">
         <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                if (isset($_POST["searchbar"])) {
-                    $searchValue = $_POST["searchbar"];
-                    echo "<div class='search-sct'>";
-                    echo "<div class='title-sct'>";
-                    echo "<h2>Résultats de la recherche 🔍</h2>";
-                    echo "</div>";
+            $idR  = $_GET['id'];
+            $recettes = $DAO->getRecetteByCategory($idR);
+            echo "<div class='search-sct'>";
+            echo "<div class='title-sct'>";
+            echo "<h2>Filtre par catégorie ⚙️</h2>";
+            echo "</div>";
+            foreach ($recettes as $resultat) {
                     echo "<div class='grid-sct'>";
+                    echo '<a class="link" href="recette.php?id=' . $resultat['id'] . '" style="color: black; text-decoration: none;">';
                     echo "<div class='grid'>";
-                    $recherche = $DAO->search($searchValue);
-                    foreach ($recherche as $resultat) {
-                        echo "<div class='grid'>";
-                        echo '<a class="link" href="recette.php?id=' . $resultat['id'] . '" style="color: black; text-decoration: none;">';
-                        echo "<div id='img'><img src='{$resultat['img']}'></img></div>";
-                        echo "<div id='name'><p>{$resultat['nom']}</p>";
-                        echo "</div>";
-                        echo "</div>";
-                    }
-                        
+                    echo "<div class='grid'>";
+                    echo "<div id='img'><img src='{$resultat['img']}'></img></div>";
+                    echo "<div id='name'><p>{$resultat['nom']}</p>";
                     echo "</div>";
+                    echo "</div>";    
                     echo "</div>";
                     echo "</div>";
                 }
-            } else {
-                echo "Le formulaire n'a pas été soumis en méthode POST.";
-            }
+                echo "</div>";
         ?>
     </div>
 </body>
