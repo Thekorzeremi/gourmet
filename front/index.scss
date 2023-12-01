@@ -176,6 +176,10 @@ body {
                     width: 95%;
                     gap: 0px;
                     height: 95%;
+                    
+                    &:hover {
+                        cursor: pointer;
+                    }
     
                     .grid1 {
                         background-color: #C6DCDA; 
@@ -253,6 +257,10 @@ body {
                     width: 95%;
                     gap: 0px;
                     height: 95%;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
     
                     .grid1 {
                         background-color: #C6DCDA; 
@@ -324,6 +332,10 @@ body {
                     width: 95%;
                     gap: 0px;
                     height: 95%;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
     
                     .grid1 {
                         background-color: #C6DCDA; 
@@ -416,6 +428,10 @@ body {
                     width: 95%;
                     gap: 0px;
                     height: 95%;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
         }
