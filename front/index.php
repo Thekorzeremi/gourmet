@@ -15,6 +15,9 @@
                     <a href="./" style="color: black; text-decoration: none">🍴 KOUIZINE</a>
                 </div>
                 <div class="search-sct">
+                    <a class='link' href="gestion.php">
+                        <img src="assets/data.svg">
+                    </a>
                     <form action="search.php" method="post">
                         <input type="search" name="searchbar" id="searchbar" placeholder='Des recettes, des ingrédients...' required/>
                         <div id="img">
@@ -64,6 +67,7 @@
                     foreach ($recettes as $recette) {
                         if ($counter < 5) {
                             echo "<div class='grid" . $counter . "'>";
+                            echo '<a href="recette.php?id=' . $counter . '" style="color: black; text-decoration: none;">';
                             echo "<div id='img'><img src='{$recette['img']}'></img></div>";
                             echo "<div id='name'><p>{$recette['nom']}</p>";
                             echo "</div>";
@@ -85,6 +89,7 @@
                     foreach ($recettes as $recette) {
                         if ($counter2 < 4) {
                             echo "<div id='grid' class='grid" . $counter2 . "'>";
+                            echo '<a href="recette.php?id=' . $counter2 . '" style="color: black; text-decoration: none;">';
                             echo "<div id='img'><img src='{$recette['img']}'></img></div>";
                             echo "<div id='name'><p>{$recette['nom']}</p>";
                             echo "</div>";
@@ -106,6 +111,7 @@
                     foreach ($recettes as $recette) {
                         if ($counter3 < 7) {
                             echo "<div id='grid' class='grid" . $counter3 . "'>";
+                            echo '<a href="recette.php?id=' . $counter3 . '" style="color: black; text-decoration: none;">';
                             echo "<div id='img'><img src='{$recette['img']}'></img></div>";
                             echo "<div id='name'><p>{$recette['nom']}</p>";
                             echo "</div>";
@@ -127,12 +133,13 @@
                     foreach ($recettes as $recette) {
                         if ($counter4 < 999) {
                             echo '<div class="recette-sct" id="recette">';
-                                echo '<div id="img">';
-                                    echo "<img src='{$recette['img']}' id='btnImg'></img>";
-                                echo '</div>';
-                                echo '<div id="name">';
-                                    echo "<p>{$recette['nom']}</p>";
-                                echo '</div>';
+                            echo '<a href="recette.php?id=' . $counter4 . '" style="color: black; text-decoration: none;">';
+                            echo '<div id="img">';
+                            echo "<img src='{$recette['img']}' id='btnImg'></img>";
+                            echo '</div>';
+                            echo '<div id="name">';
+                            echo "<p>{$recette['nom']}</p>";
+                            echo '</div>';
                             echo '</div>';
                             $counter4++;
                         } else {

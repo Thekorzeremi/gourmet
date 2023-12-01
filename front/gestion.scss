@@ -57,6 +57,11 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+
+                .link {
+                  position: absolute;
+                  left: -5vw;
+              }
                 
                 #searchbar {
                     height: 100%;
@@ -77,14 +82,15 @@ body {
                 }
 
                 #img {
-                    position: absolute;
-                    left: -.5rem;
-                    height: 2rem;
-                    width: 2rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
+                  position: absolute;
+                  top: 0.2rem;
+                  left: -1.7rem;
+                  height: 2rem;
+                  width: 2rem;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+              }
             }
         }
 

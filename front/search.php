@@ -15,6 +15,9 @@
                     <a href="./" style="color: black; text-decoration: none">🍴 KOUIZINE</a>
                 </div>
                 <div class="search-sct">
+                    <a class='link' href="gestion.php">
+                        <img src="assets/data.svg">
+                    </a>
                     <form action="search.php" method="post">
                         <input type="search" name="searchbar" id="searchbar" placeholder='Des recettes, des ingrédients...' required/>
                         <div id="img">
