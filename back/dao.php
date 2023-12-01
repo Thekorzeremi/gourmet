@@ -298,7 +298,7 @@ class DAO {
         }
     }
 
-    public function searchRecette($input) {
+    public function search($input) {
         try {
             $row = $this->bdd->prepare("SELECT * FROM recette WHERE input = ?");
             $row2 = $this->bdd->prepare("SELECT * FROM ingredient WHERE input = ?"); 
