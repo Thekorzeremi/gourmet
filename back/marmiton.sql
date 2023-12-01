@@ -52,14 +52,34 @@ INSERT INTO Recette (nom, img, etape1, etape2, etape3, etape4, etape5, etape6, e
 VALUES ('Tarte aux pommes', 'https://assets.afcdn.com/recipe/20230127/139908_w600.jpg', 'Préparer la pâte...', 'Éplucher et couper les pommes...', 'Cuire au four pendant 30 minutes.', NULL, NULL, NULL, NULL, NULL, 3);
 
 
-INSERT INTO Ingredient (nom, quantite, img, id_recette) 
-VALUES ('Laitue', '200g', 'laitue.jpg', 1);
-
-INSERT INTO Ingredient (nom, quantite, img, id_recette) 
-VALUES ('Poulet', '1 kg', 'poulet.jpg', 2);
-
-INSERT INTO Ingredient (nom, quantite, img, id_recette) 
-VALUES ('Pommes', '4', 'pommes.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Poulet', '1 kg', 'https://assets.afcdn.com/recipe/20170607/67769_origin.jpg', 2);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Pommes', '4', 'https://assets.afcdn.com/recipe/20170607/67365_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Huile', '4', 'https://assets.afcdn.com/recipe/20220117/127496_origin.png', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Sucre vanillé', '4', 'https://assets.afcdn.com/recipe/20170607/67644_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Sucre en poudre', '4', 'https://assets.afcdn.com/recipe/20170607/67377_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Crême fraiche', '4', 'https://assets.afcdn.com/recipe/20170607/67763_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Pâte brisée', '4', 'https://assets.afcdn.com/recipe/20221207/138285_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Oeuf', '4', 'https://assets.afcdn.com/recipe/20220126/128066_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Laitue', '4', 'https://assets.afcdn.com/recipe/20171229/76431_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Parmesan', '4', 'https://assets.afcdn.com/recipe/20170607/67344_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Tranche de pain', '4', 'https://assets.afcdn.com/recipe/20170607/67639_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Sel', '4', 'https://assets.afcdn.com/recipe/20170607/67687_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Poivre', '4', 'https://assets.afcdn.com/recipe/20170607/67563_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Tabasco', '4', 'https://assets.afcdn.com/recipe/20170607/67548_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Moutarde', '4', 'https://assets.afcdn.com/recipe/20171121/75409_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Câpre', '4', 'https://assets.afcdn.com/recipe/20170607/67470_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Citron', '4', 'https://assets.afcdn.com/recipe/20170607/67457_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ("Gousse d'ail", '4', 'https://assets.afcdn.com/recipe/20170607/67514_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Vinaigre de riz', '4', 'https://assets.afcdn.com/recipe/20170621/69188_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Sésame', '4', 'https://assets.afcdn.com/recipe/20170607/67391_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Avocat', '4', 'https://assets.afcdn.com/recipe/20170607/67382_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Concombre', '4', 'https://assets.afcdn.com/recipe/20170607/67693_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Crabe', '4', 'https://assets.afcdn.com/recipe/20170607/67697_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Feuille de nori', '4', 'https://assets.afcdn.com/recipe/20171110/74694_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Riz', '4', 'https://assets.afcdn.com/recipe/20170607/67482_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Wasabi', '4', 'https://assets.afcdn.com/recipe/20170621/69191_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Sauce soja salée', '4', 'https://assets.afcdn.com/recipe/20170607/67466_origin.jpg', 3);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Sauce soja sucrée', '4', 'https://assets.afcdn.com/recipe/20170607/67466_origin.jpg', 3);
 
 INSERT INTO Recette(nom, img, id_categorie) VALUES ('Dinde','https://assets.afcdn.com/recipe/20180209/77491_w600.jpg',2);
 INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','https://assets.afcdn.com/recipe/20191231/105959_w600.jpg',2);

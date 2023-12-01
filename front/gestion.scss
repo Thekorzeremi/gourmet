@@ -153,15 +153,18 @@ body {
         justify-content: center;
 
         .gestion-sct {
-            background-color: pink;
+            background-color: white;
             height: auto;
             width: 75vw;
             display: flex;
             justify-content: center;
+            margin-top: 2rem;
+            border-radius: 10px;
 
             .cat {
                 height: auto;
                 width: 33%;
+                margin: 1rem;
 
                 .btn {
                     width: 100%;
@@ -171,6 +174,7 @@ body {
                 .btn-sct {
                     height: auto;
                     width: 100%;
+
                     #img {
                         height: auto;
                         width: 100%;
@@ -185,6 +189,7 @@ body {
             .rec {
                 height: auto;
                 width: 33%;
+                margin: 1rem;
 
                 .btn {
                     width: 100%;
@@ -208,6 +213,7 @@ body {
             .ing {
                 height: auto;
                 width: 33%;
+                margin: 1rem;
 
                 .btn {
                     width: 100%;
