@@ -60,3 +60,16 @@ VALUES ('Poulet', '1 kg', 'poulet.jpg', 2);
 
 INSERT INTO Ingredient (nom, quantite, img, id_recette) 
 VALUES ('Pommes', '4', 'pommes.jpg', 3);
+
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Dinde','dinde.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','alligot.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Sushi Maki','sushi.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Tiramisu','tiramisu.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Dinde','dinde.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','alligot.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Sushi Maki','sushi.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Tiramisu','tiramisu.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Dinde','dinde.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','alligot.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Sushi Maki','sushi.jpg',2);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Tiramisu','tiramisu.jpg',2);
