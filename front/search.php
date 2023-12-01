@@ -12,15 +12,13 @@
     <div class="navbar-sct">
             <div class="topbar-sct">
                 <div class="logo-sct">
-                    <a href="index.php">
-                        <p>🍴 KOUIZINE</p>
-                    </a>
+                    <a href="./" style="color: black; text-decoration: none">🍴 KOUIZINE</a>
                 </div>
                 <div class="search-sct">
                     <form action="search.php" method="post">
                         <input type="search" name="searchbar" id="searchbar" placeholder='Des recettes, des ingrédients...' required/>
                         <div id="img">
-                            <input type="image" src='assets/search-icon.svg'></img>
+                            <input type="image" src='assets/search-icon.svg'></input>
                         </div>
                     </form>
                 </div>
@@ -34,12 +32,13 @@
                     foreach ($categories as $categorie) {
                         if ($counter < 6) {
                             echo '<div class="btn-sct">';
-                            echo '<div id="img">';
-                            echo "<img src='{$categorie['img']}' id='btnImg'></img>";
-                            echo '</div>';
-                            echo '<div id="label">';
-                            echo "<p>{$categorie['nom']}</p>";
-                            echo '</div>';
+                                echo '<a href="categorie.php?id=' . ($counter + 1) . '" style="color: black; text-decoration: none; display: flex">';
+                                echo '<div id="img">';
+                                    echo "<img src='{$categorie['img']}' id='btnImg'></img>";
+                                echo '</div>';
+                                echo '<div id="label">';
+                                    echo "<p>{$categorie['nom']}</p>";
+                                echo '</div>';
                             echo '</div>';       
                             $counter++;
                         } else {
