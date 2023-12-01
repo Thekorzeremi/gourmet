@@ -136,7 +136,7 @@
 
                     foreach ($recettes as $recette) {
                         if ($counter < 999) {
-                            echo '<div class="recette-sct">';
+                            echo '<div class="recette-sct" id="recette">';
                             echo '<div id="img">';
                             echo "<img src='{$recette['img']}' id='btnImg'></img>";
                             echo '</div>';

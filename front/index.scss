@@ -133,7 +133,7 @@ body {
         position: relative;
         top: 20vh;
         left: 0;
-        height: 1000vh;
+        height: auto;
         width: 100vw;
         background-color: #EFEFEF;
         display: flex;
@@ -381,7 +381,7 @@ body {
 
         .all-sct {
             width: 75vw;
-            height: 150vh;
+            height: auto;
             background-color: #FFFFFF;
             margin-top: 4vh;
             border-radius: 2.5vh;
@@ -393,6 +393,7 @@ body {
                 margin-left: 2vw;
                 width: auto;
                 height: auto;
+                background-color: blue;
     
                 h2 {
                     margin: 0;
@@ -402,20 +403,30 @@ body {
             }
 
             .grid-sct {
-                height: 100%;
+                height: auto;
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin: 0;
             
             
                 .grid {
-                    display: grid; 
-                    grid-template-rows: 1fr 1fr 1fr;
-                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-                    width: 95%;
+                    display: flex;
+                    flex-wrap: wrap; 
+                    justify-content: space-evenly;
+                    // grid-template-rows: 1fr 1fr 1fr;
+                    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                    width: 100%;
                     gap: 0px;
-                    height: 95%;
+                    height: 97%;
+
+                    #recette {
+                        height: 40vh;
+                        width: 17vw;
+                        background-color: red;
+                        margin: 0;
+                    }
                 }
             }
         }
