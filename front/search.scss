@@ -195,6 +195,10 @@ body {
                         cursor: pointer;
                     }
                     margin-bottom: auto;
+                    
+                    .link {
+                        width: 100%;
+                    }
 
                     .grid {
                         height: 40vh;
@@ -204,6 +208,7 @@ body {
                         margin-right: 0;
                         margin-bottom: 2vh;
                         background-color: grey;
+
 
                         #id {}
                         #name {}

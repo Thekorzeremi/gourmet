@@ -64,10 +64,10 @@
                     echo "</div>";
                     echo "<div class='grid-sct'>";
                     echo "<div class='grid'>";
-                    $input = "Poulet rôti";
                     $recherche = $DAO->search($searchValue);
                     foreach ($recherche as $resultat) {
                         echo "<div class='grid'>";
+                        echo '<a class="link" href="recette.php?id=' . $resultat['id'] . '" style="color: black; text-decoration: none;">';
                         echo "<div id='img'><img src='{$resultat['img']}'></img></div>";
                         echo "<div id='name'><p>{$resultat['nom']}</p>";
                         echo "</div>";
