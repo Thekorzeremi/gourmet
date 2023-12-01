@@ -392,8 +392,7 @@ body {
                 margin-top: 3vh;
                 margin-left: 2vw;
                 width: auto;
-                height: auto;
-                background-color: blue;
+                height: 7vh;
     
                 h2 {
                     margin: 0;
@@ -410,7 +409,6 @@ body {
                 align-items: center;
                 margin: 0;
             
-            
                 .grid {
                     display: flex;
                     flex-wrap: wrap; 
@@ -419,13 +417,17 @@ body {
                     // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
                     width: 100%;
                     gap: 0px;
-                    height: 97%;
+                    height: 100%;
+                    margin-bottom: auto;
 
                     #recette {
                         height: 40vh;
                         width: 17vw;
-                        background-color: red;
-                        margin: 0;
+                        margin-left: 0;
+                        margin-top: 0;
+                        margin-right: 0;
+                        margin-bottom: 2vh;
+                        background-color: grey;
                     }
                 }
             }
