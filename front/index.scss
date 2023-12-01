@@ -38,6 +38,11 @@ body {
                 justify-content: center;
                 font-weight: 700;
                 font-size: 4vh;
+                
+                &a {
+                    color: black;
+                    text-decoration: none;
+                }
 
                 &:hover {
                     cursor: default;
