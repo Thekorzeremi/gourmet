@@ -15,11 +15,12 @@
                     <p>🍴 KOUIZINE</p>
                 </div>
                 <div class="search-sct">
-                    <input type="search" name="searchbar" id="searchbar" placeholder='Des recettes, des ingrédients...'/>
-                    <div id="searchbtn"></div>
-                    <div id="img">
-                        <img src='assets/search-icon.svg'></img>
-                    </div>
+                    <form action="search.php" method="post">
+                        <input type="search" name="searchbar" id="searchbar" placeholder='Des recettes, des ingrédients...' required/>
+                        <div id="img">
+                            <input type="image" src='assets/search-icon.svg'></img>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="botbar-sct">
