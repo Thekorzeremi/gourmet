@@ -140,6 +140,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        cursor: default;
     
         .trend-sct {
             width: 75vw;
@@ -450,6 +451,12 @@ body {
                         grid-row-end: 2;
                         grid-column-end: 10;
                         max-height: 25rem;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }
     
                     .grid2 {
@@ -458,6 +465,12 @@ body {
                         grid-row-end: 3;
                         grid-column-end: 4;
                         max-height: 25rem;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }
                     
                     .grid3 {
@@ -466,6 +479,12 @@ body {
                         grid-row-end: 3;
                         grid-column-end: 7;
                         max-height: 25rem;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }   
 
                     .grid4 {
@@ -474,6 +493,12 @@ body {
                         grid-row-end: 3;
                         grid-column-end: 10;
                         max-height: 25rem;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     
                     }
     
@@ -483,6 +508,12 @@ body {
                         grid-row-end: 4;
                         grid-column-end: 5;
                         max-height: 25rem;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }
                     
                     .grid6 {
@@ -491,6 +522,12 @@ body {
                         grid-row-end: 4;
                         grid-column-end: 10;
                         max-height: 25rem;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
                     }  
     
                 }
@@ -544,14 +581,33 @@ body {
                     }
                     margin-bottom: auto;
 
-                    #recette {
-                        height: 40vh;
+                    .recette-sct {
+                        height: 35vh;
                         width: 17vw;
                         margin-left: 0;
                         margin-top: 0;
                         margin-right: 0;
                         margin-bottom: 2vh;
-                        background-color: grey;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
+
+                        #img {
+                            height: 80%;
+                            width: auto;
+                            margin: 1rem;
+                            overflow: hidden;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 5px;
+                        }
+
+                        #name {
+                            margin: 1rem;
+                        }
                     }
                 }
             }

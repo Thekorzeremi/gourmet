@@ -138,7 +138,7 @@
                         if ($counter < 999) {
                             echo '<div class="recette-sct">';
                             echo '<div id="img">';
-                            echo "<img src='{$recette['img']}' id='btnImg'></img>";
+                            echo "<img src='{$recette['img']}' id='btnImg' style='height: 20rem'></img>";
                             echo '</div>';
                             echo '<div id="name">';
                             echo "<p>{$recette['nom']}</p>";
