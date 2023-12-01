@@ -11,7 +11,7 @@
 <body>
     <div class="navbar-sct">
             <div class="topbar-sct">
-                <div class="logo-sct">
+                <div class="logo-sct" style="margin: 0 0 0 2rem">
                     <a href="./" style="color: black; text-decoration: none">🍴 KOUIZINE</a>
                 </div>
                 <div class="search-sct">
@@ -58,6 +58,7 @@
             $idR  = $_GET['id'];
             $recettes = $DAO->getRecetteById($idR);
             $ingredients = $DAO->getIngredientByRecette($idR);
+
             foreach ($recettes as $recette) {
                 echo '<div id="img">';
                 echo "<img src='{$recette['img']}' id='btnImg'></img>";
@@ -66,14 +67,21 @@
                 echo "<p>{$recette['nom']}</p>";
                 echo '</div>';
                 echo "<h2>Ingrédients</h2>";
+                echo "<div class='ing-sct'>";
                 foreach ($ingredients as $ing) {
-                    echo "<img src={$ing['img']}>";
-                    echo "<p>{$ing['quantite']}  {$ing['nom']}</p>";
+                    echo "<div class='card'>";
+                    echo "<img src={$ing['img']} style='height: 5rem;'>";
+                    echo "<p style='margin: 0; font-size: .8rem'>{$ing['quantite']}</p><p style='margin: 0; font-size: .8rem'>{$ing['nom']}</p>";
+                    echo "</div>";
                 }
+                echo "</div>";
                 echo "<h2>Préparation</h2>";
-                for ($i = 0; $i < 8; $i++) {
+                for ($i = 1; $i < 9; $i++) {
                     if ($recette['etape' . $i] != null) {
-                        echo "<p>{$recette['etape' . $i]}</p>";
+                        echo "<div class='step-sct'>";
+                        echo "<h2 class='h2'>Etape" . $i . " :</h2>";
+                        echo "<p class='p'>{$recette['etape' . $i]}</p>";
+                        echo "</div>";
                     }
                 }
             }

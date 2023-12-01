@@ -11,7 +11,7 @@
 <body>
     <div class="navbar-sct">
             <div class="topbar-sct">
-                <div class="logo-sct">
+                <div class="logo-sct" style="margin: 0 0 0 2rem">
                     <a href="./" style="color: black; text-decoration: none">🍴 KOUIZINE</a>
                 </div>
                 <div class="search-sct">

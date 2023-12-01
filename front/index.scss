@@ -60,7 +60,8 @@ body {
 
                 .link {
                     position: absolute;
-                    left: -5vw;
+                    left: -4vw;
+                    top: .9rem;
                 }
                 
                 #searchbar {
@@ -83,7 +84,7 @@ body {
 
                 #img {
                     position: absolute;
-                    top: 0.2rem;
+                    top: 0.6rem;
                     left: -1.7rem;
                     height: 2rem;
                     width: 2rem;
@@ -91,6 +92,8 @@ body {
                     justify-content: center;
                     align-items: center;
                 }
+
+                
             }
         }
 
@@ -254,7 +257,7 @@ body {
                         grid-column-end: 3;
                         max-height: 20vh;
                         transition: all .3s ease-in-out;
-                        max-width: 27%;
+                        min-width: 27%;
 
                         &:hover {
                             transform: scale(1.01);
@@ -268,7 +271,7 @@ body {
                         grid-column-end: 3;
                         max-height: 20vh;
                         transition: all .3s ease-in-out;
-                        max-width: 27%;
+                        min-width: 27%;
 
                         &:hover {
                             transform: scale(1.01);
@@ -282,7 +285,7 @@ body {
                         grid-column-end: 3;
                         max-height: 20vh;
                         transition: all .3s ease-in-out;
-                        max-width: 27%;
+                        min-width: 27%;
 
                         &:hover {
                             transform: scale(1.01);
