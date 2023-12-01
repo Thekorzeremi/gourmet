@@ -88,10 +88,19 @@ INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Wasabi', '', 'h
 INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Sauce soja salée', '', 'https://assets.afcdn.com/recipe/20170607/67466_origin.jpg', 4);
 INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Sauce soja sucrée', '', 'https://assets.afcdn.com/recipe/20170607/67466_origin.jpg', 4);
 
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Sushi Maki','https://assets.afcdn.com/recipe/20131025/16373_w600.jpg',2);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Sel', 'Quelques pincées', 'https://assets.afcdn.com/recipe/20170607/67687_origin.jpg', 5);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Poivre', 'Quelques pincées', 'https://assets.afcdn.com/recipe/20170607/67563_origin.jpg', 5);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Crême fraiche', '20cl', 'https://assets.afcdn.com/recipe/20170607/67763_origin.jpg', 5);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Beurre', '50g', 'https://assets.afcdn.com/recipe/20201201/115998_origin.jpg', 5);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ("Tôme d'auvergne", '50g', 'https://assets.afcdn.com/recipe/20170607/67596_origin.jpg', 5);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ("Pomme de terre", '500g', 'https://assets.afcdn.com/recipe/20170607/67419_origin.jpg', 5);
+INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ("Gousse d'ail", '1', 'https://assets.afcdn.com/recipe/20170607/67514_origin.jpg', 5);
+
+
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Sushi Maki','https://assets.afcdn.com/recipe/20131025/16373_w600.jpg',5);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','https://assets.afcdn.com/recipe/20191231/105959_w600.jpg',2);
 
 INSERT INTO Recette(nom, img, id_categorie) VALUES ('Dinde','https://assets.afcdn.com/recipe/20180209/77491_w600.jpg',2);
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','https://assets.afcdn.com/recipe/20191231/105959_w600.jpg',2);
 INSERT INTO Recette(nom, img, id_categorie) VALUES ('Tiramisu','https://assets.afcdn.com/recipe/20170614/69362_w600.jpg',2);
 INSERT INTO Recette(nom, img, id_categorie) VALUES ('Dinde','https://assets.afcdn.com/recipe/20180209/77491_w600.jpg',2);
 INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','https://assets.afcdn.com/recipe/20191231/105959_w600.jpg',2);
