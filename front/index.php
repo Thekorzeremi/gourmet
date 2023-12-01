@@ -63,7 +63,7 @@
                         if ($counter < 5) {
                             echo "<div class='grid" . $counter . "'>";
                             echo "<div id='img'><img src='{$recette['img']}'></img></div>";
-                            echo "<div id='name'><p>{$recette['nom']}</p>";
+                            echo "<div id='name'><span>{$recette['nom']}</span>";
                             echo "</div>";
                             echo "</div>";
                             $counter++;
@@ -88,7 +88,7 @@
 
                     foreach ($recettes as $recette) {
                         if ($counter < 4) {
-                            echo "<div class='grid" . $counter . "'>";
+                            echo "<div id='grid' class='grid" . $counter . "'>";
                             echo "<div id='img'><img src='{$recette['img']}'></img></div>";
                             echo "<div id='name'><p>{$recette['nom']}</p>";
                             echo "</div>";
@@ -112,7 +112,7 @@
 
                     foreach ($recettes as $recette) {
                         if ($counter < 7) {
-                            echo "<div class='grid" . $counter . "'>";
+                            echo "<div id='grid' class='grid" . $counter . "'>";
                             echo "<div id='img'><img src='{$recette['img']}'></img></div>";
                             echo "<div id='name'><p>{$recette['nom']}</p>";
                             echo "</div>";
