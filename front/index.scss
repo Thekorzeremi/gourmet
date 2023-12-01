@@ -202,6 +202,7 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    justify-content: center;
                     border-radius: 5px;
                 
                     img {
@@ -253,6 +254,7 @@ body {
                         grid-column-end: 3;
                         max-height: 20vh;
                         transition: all .3s ease-in-out;
+                        max-width: 27%;
 
                         &:hover {
                             transform: scale(1.01);
@@ -266,6 +268,7 @@ body {
                         grid-column-end: 3;
                         max-height: 20vh;
                         transition: all .3s ease-in-out;
+                        max-width: 27%;
 
                         &:hover {
                             transform: scale(1.01);
@@ -279,6 +282,7 @@ body {
                         grid-column-end: 3;
                         max-height: 20vh;
                         transition: all .3s ease-in-out;
+                        max-width: 27%;
 
                         &:hover {
                             transform: scale(1.01);

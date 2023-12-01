@@ -61,18 +61,16 @@
             echo "<div class='title-sct'>";
             echo "<h2>Filtre par catégorie ⚙️</h2>";
             echo "</div>";
+            echo "<div class='grid-sct'>";
             foreach ($recettes as $resultat) {
-                    echo "<div class='grid-sct'>";
                     echo '<a class="link" href="recette.php?id=' . $resultat['id'] . '" style="color: black; text-decoration: none;">';
                     echo "<div class='grid'>";
-                    echo "<div class='grid'>";
-                    echo "<div id='img'><img src='{$resultat['img']}'></img></div>";
+                    echo "<div id='img'><img src='{$resultat['img']}' style='height: 15rem'></img></div>";
                     echo "<div id='name'><p>{$resultat['nom']}</p>";
-                    echo "</div>";
-                    echo "</div>";    
                     echo "</div>";
                     echo "</div>";
                 }
+                echo "</div>";
                 echo "</div>";
         ?>
     </div>
