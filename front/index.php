@@ -55,10 +55,21 @@
             </div>
             <div class='grid-sct'>
                 <div class="grid">
-                    <div class="grid1"></div>
-                    <div class="grid2"></div>
-                    <div class="grid3"></div>
-                    <div class="grid4"></div>
+                    <?php
+                    $recettes = $DAO->getRecette();
+                    $counter = 1;
+
+                    foreach ($recettes as $recette) {
+                        if ($counter < 5) {
+                            echo "<div class='grid" . $counter . "'>";
+                            echo "<div id='img'><img src='{$recette['img']}'></img></div>";
+                            echo "<div id='name'><p>{$recette['nom']}</p>";
+                            echo "</div>";
+                            echo "</div>";
+                            $counter++;
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -71,6 +82,21 @@
                     <div class="grid1"></div>
                     <div class="grid2"></div>
                     <div class="grid3"></div>
+                    <?php
+                    $recettes = $DAO->getRecette();
+                    $counter = 1;
+
+                    foreach ($recettes as $recette) {
+                        if ($counter < 4) {
+                            echo "<div class='grid" . $counter . "'>";
+                            echo "<div id='img'><img src='{$recette['img']}'></img></div>";
+                            echo "<div id='name'><p>{$recette['nom']}</p>";
+                            echo "</div>";
+                            echo "</div>";
+                            $counter++;
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -80,12 +106,21 @@
             </div>
             <div class="grid-sct">
                 <div class="grid">
-                    <div class="grid1"></div>
-                    <div class="grid2"></div>
-                    <div class="grid3"></div>
-                    <div class="grid4"></div>
-                    <div class="grid5"></div>
-                    <div class="grid6"></div>
+                    <?php
+                    $recettes = $DAO->getRecette();
+                    $counter = 1;
+
+                    foreach ($recettes as $recette) {
+                        if ($counter < 7) {
+                            echo "<div class='grid" . $counter . "'>";
+                            echo "<div id='img'><img src='{$recette['img']}'></img></div>";
+                            echo "<div id='name'><p>{$recette['nom']}</p>";
+                            echo "</div>";
+                            echo "</div>";
+                            $counter++;
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>
