@@ -300,10 +300,9 @@ class DAO {
 
     public function search($input) {
         try {
-            $row = $this->bdd->prepare("SELECT * FROM recette WHERE input = ?");
-            $row2 = $this->bdd->prepare("SELECT * FROM ingredient WHERE input = ?"); 
+            $row = $this->bdd->prepare("SELECT * FROM recette WHERE nom = ?");
             $row->execute([$input]);
-            $row2->execute([$input]);
+            return $row->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             echo "Erreur lors de la recherche " . $e->getMessage();
         }
