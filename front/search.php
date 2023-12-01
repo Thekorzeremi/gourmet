@@ -12,15 +12,13 @@
     <div class="navbar-sct">
             <div class="topbar-sct">
                 <div class="logo-sct">
-                    <a href="index.php">
-                        <p>🍴 KOUIZINE</p>
-                    </a>
+                    <a href="./" style="color: black; text-decoration: none">🍴 KOUIZINE</a>
                 </div>
                 <div class="search-sct">
                     <form action="search.php" method="post">
                         <input type="search" name="searchbar" id="searchbar" placeholder='Des recettes, des ingrédients...' required/>
                         <div id="img">
-                            <input type="image" src='assets/search-icon.svg'></img>
+                            <input type="image" src='assets/search-icon.svg'></input>
                         </div>
                     </form>
                 </div>
