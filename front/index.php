@@ -33,12 +33,13 @@
                         if ($counter < 6) {
                             echo '<div class="btn-sct">';
                             echo '<a href="categorie.php?id=' . ($counter + 1) . '" style="color: black; text-decoration: none;">';
-                                echo '<div id="img">';
-                                    echo "<img src='{$categorie['img']}' id='btnImg'></img>";
-                                echo '</div>';
-                                echo '<div id="label">';
-                                    echo "<p>{$categorie['nom']}</p>";
-                                echo '</div>';
+                            echo '<div id="img">';
+                            echo "<img src='{$categorie['img']}' id='btnImg'></img>";
+                            echo '</div>';
+                            echo '<div id="label">';
+                            echo "<p>{$categorie['nom']}</p>";
+                            echo '</div>';
+                            echo '</a>';
                             echo '</div>';       
                             $counter++;
                         } else {
