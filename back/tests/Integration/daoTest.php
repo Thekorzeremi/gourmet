@@ -45,9 +45,9 @@ class DAOTest extends TestCase {
         $this->dao->addCategorie($testCategorie);
         $stmt = $this->pdo->query("SELECT * FROM categorie WHERE nom = TestAjoutCategorie");
         $categorie = $stmt->fetch(PDO::FETCH_ASSOC);
-        $this->assertEquals('img',$categorie['img']);
         $this->expectException(InvalidArgumentException::class); // EXCEPTION
         $this->expectExceptionMessage("Ajout de catégorie impossible");
+        $this->assertEquals('img',$categorie['img']);
     }
 
     // Fonction TU d ajout de recette
@@ -69,9 +69,9 @@ class DAOTest extends TestCase {
         $this->dao->addRecette($testRecette);
         $stmt = $this->pdo->query("SELECT * FROM recette WHERE nom = TestAjoutRecette");
         $recette = $stmt->fetch(PDO::FETCH_ASSOC);
-        $this->assertEquals('TestAjoutRecette',$recette['nom']);
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("Ajout de recette impossible");
+        $this->assertEquals('TestAjoutRecette',$recette['nom']);
     }
 
     // Fonction TU d ajout d ingredient
@@ -85,9 +85,9 @@ class DAOTest extends TestCase {
         $this->dao->addIngredient($testIngredient);
         $stmt = $this->pdo->query("SELECT * FROM ingredient WHERE nom = TestAjoutIngredient");
         $ingredient = $stmt->fetch(PDO::FETCH_ASSOC);
-        $this->assertEquals('TestAjoutIngredient',$ingredient['nom']);
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("Ajout d'ingrédient impossible");
+        $this->assertEquals('TestAjoutIngredient',$ingredient['nom']);
     }
 
     // Fonction TU d ajout de categorie
@@ -99,9 +99,9 @@ class DAOTest extends TestCase {
         $this->dao->addCategorie($testCategorie);
         $stmt = $this->pdo->query("SELECT * FROM categorie WHERE nom = TestCategorie");
         $categorie = $stmt->fetch(PDO::FETCH_ASSOC);
-        $this->assertEquals('TestCategorie',$categorie['nom']);
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("Récupération de catégories impossible");
+        $this->assertEquals('TestCategorie',$categorie['nom']);
     }
 
     // Fonction TU de recuperation d'une recette
@@ -122,9 +122,9 @@ class DAOTest extends TestCase {
         $this->dao->addRecette($testRecette);
         $stmt = $this->pdo->query("SELECT * FROM recette WHERE nom = TestRecette");
         $recette = $stmt->fetch(PDO::FETCH_ASSOC);
-        $this->assertEquals('TestRecette',$recette['nom']);
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("Récupération de recettes impossible");
+        $this->assertEquals('TestRecette',$recette['nom']);
     }
 
     // Fonction TU de recuperation d une recette par son ID
@@ -133,9 +133,9 @@ class DAOTest extends TestCase {
         $stmt->execute();
         $stmt2 = $this->pdo->query("SELECT * FROM recette WHERE id = 999");
         $recette = $stmt2->fetch(PDO::FETCH_ASSOC);
-        $this->assertEquals('test', $recette['nom']);
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("Récupération de recettes impossible");
+        $this->assertEquals('test', $recette['nom']);
     }    
     
     // Fonction TU de recuperation d une recette par sa categorie
@@ -155,9 +155,9 @@ class DAOTest extends TestCase {
         );
         $this->dao->addRecette($testRecette);
         $recettes = $this->dao->getRecetteByCategorie("1");
-        $this->assertTrue(in_array($testRecette, $recettes));
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("Récupération de recettes par catégorie impossible");
+        $this->assertTrue(in_array($testRecette, $recettes));
     }
     
     // Fonction TU de recuperation d ingredients
@@ -166,9 +166,9 @@ class DAOTest extends TestCase {
         $stmt->execute();
         $stmt2 = $this->pdo->query("SELECT * FROM ingredient WHERE id = 999");
         $ing = $stmt2->fetch(PDO::FETCH_ASSOC);
-        $this->assertEquals('Test', $ing['nom']);
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("Récupération des ingrédients impossible");
+        $this->assertEquals('Test', $ing['nom']);
 
     }
     
@@ -196,10 +196,10 @@ class DAOTest extends TestCase {
         );
         $this->dao->addIngredient($testIngredient);
         $ingredients = $this->dao->getIngredientByRecette("1");
-        $this->assertTrue(in_array($testIngredient, $ingredients));
-        $this->assertEquals('Test', $ingredients->getNom());
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("Récupération des ingrédients par recette impossible");
+        $this->assertTrue(in_array($testIngredient, $ingredients));
+        $this->assertEquals('Test', $ingredients->getNom());
     }
 
     // Fonction TU de suppression d une categorie par un ID
@@ -209,9 +209,9 @@ class DAOTest extends TestCase {
         $stmt2 = $this->pdo->query("SELECT * FROM categorie WHERE id = 500");
         $cat = $stmt2->fetch(PDO::FETCH_ASSOC);
         $this->dao->removeCategorieById(500);
-        $this->assertNotEquals("Test", $cat['nom']);
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("Suppression des catégories par id impossible");
+        $this->assertNotEquals("Test", $cat['nom']);
     }
     
     // Fonction TU de suppression d une recette par un ID
@@ -221,9 +221,9 @@ class DAOTest extends TestCase {
         $stmt2 = $this->pdo->query("SELECT * FROM recette WHERE id = 9999");
         $rec2 = $stmt2->fetch(PDO::FETCH_ASSOC);
         $this->dao->removeRecetteById(9999);
-        $this->assertNotEquals("test", $rec2['nom']);
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("Suppression des recettes par id impossible");
+        $this->assertNotEquals("test", $rec2['nom']);
     }
     
     // Fonction TU de suppression d un ingredient par un ID
@@ -233,9 +233,9 @@ class DAOTest extends TestCase {
         $stmt2 = $this->pdo->query("SELECT * FROM ingredient WHERE id = 9999");
         $ing2 = $stmt2->fetch(PDO::FETCH_ASSOC);
         $this->dao->removeIngredientById(9999);
-        $this->assertNotEquals("nom", $ing2['nom']);
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("Suppression des ingrédients par id impossible");
+        $this->assertNotEquals("nom", $ing2['nom']);
     }
     
 
@@ -261,10 +261,10 @@ class DAOTest extends TestCase {
         $this->dao->addRecette($testRecette);
         $results = $this->dao->search($nom);
         $this->assertCount(1, $results);
-        $this->assertEquals($nom, $results[0]->getNom());
-        $this->assertEquals($img, $results[0]->getImage());
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("Recherche impossible");
+        $this->assertEquals($nom, $results[0]->getNom());
+        $this->assertEquals($img, $results[0]->getImage());
     }
 
     // Fonction provider pour stocker des données utilisés testSearch()
