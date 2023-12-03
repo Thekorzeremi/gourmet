@@ -59,9 +59,10 @@ body {
                 justify-content: space-between;
 
                 .link {
-                  position: absolute;
-                  left: -5vw;
-              }
+                    position: absolute;
+                    left: -4vw;
+                    top: .9rem;
+                }
                 
                 #searchbar {
                     height: 100%;
@@ -82,8 +83,7 @@ body {
                 }
 
                 #img {
-                  position: absolute;
-                  top: 0.2rem;
+                    top: 0.6rem;
                   left: -1.7rem;
                   height: 2rem;
                   width: 2rem;
