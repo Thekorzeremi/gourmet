@@ -60,11 +60,11 @@
             $ingredients = $DAO->getIngredientByRecette($idR);
 
             foreach ($recettes as $recette) {
-                echo '<div id="img">';
-                echo "<img src='{$recette['img']}' id='btnImg'></img>";
-                echo '</div>';
                 echo '<div id="label">';
-                echo "<p>{$recette['nom']}</p>";
+                echo "<p style='margin-top: 2rem; font-size: 1.5rem'>{$recette['nom']}</p>";
+                echo '</div>';
+                echo '<div id="img">';
+                echo "<img src='{$recette['img']}' id='btnImg' style='height:20rem; width: 30rem;'></img>";
                 echo '</div>';
                 echo "<h2>Ingrédients</h2>";
                 echo "<div class='ing-sct'>";

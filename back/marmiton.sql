@@ -47,6 +47,8 @@ INSERT INTO Recette (nom, img, etape1, etape2, etape3, etape4, id_categorie)
 VALUES ('Poulet rôti', 'https://assets.afcdn.com/recipe/20130909/63747_w1024h768c1cx1872cy2808.jpg', 'Préchauffer le four...', 'Assaisonner le poulet...', 'Cuire au four pendant 1 heure.', NULL, 2);
 INSERT INTO Recette (nom, img, etape1, etape2, etape3, etape4, etape5, etape6, etape7, etape8, id_categorie)
 VALUES ('Tarte aux pommes', 'https://assets.afcdn.com/recipe/20230127/139908_w600.jpg', 'Préparer la pâte...', 'Éplucher et couper les pommes...', 'Cuire au four pendant 30 minutes.', NULL, NULL, NULL, NULL, NULL, 3);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Sushi Maki','https://assets.afcdn.com/recipe/20131025/16373_w600.jpg',5);
+INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','https://assets.afcdn.com/recipe/20191231/105959_w600.jpg',2);
 
 
 INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ('Laitue', '2', 'https://assets.afcdn.com/recipe/20171229/76431_origin.jpg', 1);
@@ -97,8 +99,6 @@ INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ("Pomme de terre"
 INSERT INTO Ingredient (nom, quantite, img, id_recette) VALUES ("Gousse d'ail", '1', 'https://assets.afcdn.com/recipe/20170607/67514_origin.jpg', 5);
 
 
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Sushi Maki','https://assets.afcdn.com/recipe/20131025/16373_w600.jpg',5);
-INSERT INTO Recette(nom, img, id_categorie) VALUES ('Alligot','https://assets.afcdn.com/recipe/20191231/105959_w600.jpg',2);
 
 INSERT INTO Recette(nom, img, id_categorie) VALUES ('Dinde','https://assets.afcdn.com/recipe/20180209/77491_w600.jpg',2);
 INSERT INTO Recette(nom, img, id_categorie) VALUES ('Tiramisu','https://assets.afcdn.com/recipe/20170614/69362_w600.jpg',2);
