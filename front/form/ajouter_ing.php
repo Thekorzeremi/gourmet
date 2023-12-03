@@ -55,6 +55,7 @@
     </div>
     <div class="content-sct">
         <?php
+        $rec = $DAO->getRecette();
             $id = 2;
             echo '<div class="form">';
             echo '<form action="req.php?id=' . $id . '" method="post">';
@@ -70,6 +71,11 @@
             echo '<h2>Quantité</h2>';
             echo '<input type="text" value="" name="qt">';
             echo '</div>';
+            foreach ($rec as $rec2) {
+                echo '<div class="rec">';
+                echo "<p>{$rec2['id']}-{$rec2['nom']}</p>";
+                echo '</div>';
+            }
             echo '<div class="id Recette">';
             echo '<h2>Id recette à indiquer</h2>';
             echo '<input type="text" value="" name="idRe">';

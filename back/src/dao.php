@@ -251,8 +251,8 @@ class DAO {
 
     public function updateCategorie($id, $categorie) {
         try {
-            $row = $this->bdd->prepare("UPDATE Categorie SET nom = ? WHERE id = ?");
-            $row->execute([$categorie->getNom(), $id]);
+            $row = $this->bdd->prepare("UPDATE Categorie SET nom = ?, img = ? WHERE id = ?");
+            $row->execute([$categorie->getNom(), $categorie->getCategorie(), $id]);
             return true;
         } catch (PDOException $e) {
             echo "Erreur lors de la modification du cate$categorie " . $e->getMessage();
