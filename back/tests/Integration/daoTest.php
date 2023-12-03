@@ -46,10 +46,11 @@ class DAOTest extends TestCase {
         $stmt = $this->pdo->query("SELECT * FROM categorie WHERE nom = TestAjoutCategorie");
         $categorie = $stmt->fetch(PDO::FETCH_ASSOC);
         $this->assertEquals('img',$categorie['img']);
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class); // EXCEPTION
         $this->expectExceptionMessage("Ajout de catégorie impossible");
     }
 
+    // Fonction TU d ajout de recette
     public function testAddRecette()
     {
         $testRecette = new Recette(
@@ -73,6 +74,7 @@ class DAOTest extends TestCase {
         $this->expectExceptionMessage("Ajout de recette impossible");
     }
 
+    // Fonction TU d ajout d ingredient
     public function testAddIngredient() {
         $testIngredient = new Ingredient(
             "TestAjoutIngredient",
@@ -88,6 +90,7 @@ class DAOTest extends TestCase {
         $this->expectExceptionMessage("Ajout d'ingrédient impossible");
     }
 
+    // Fonction TU d ajout de categorie
     public function testGetCategorie() {
         $testCategorie = new Categorie(
             "TestCategorie",
@@ -101,6 +104,7 @@ class DAOTest extends TestCase {
         $this->expectExceptionMessage("Récupération de catégories impossible");
     }
 
+    // Fonction TU de recuperation d'une recette
     public function testGetRecette() {
         $testRecette = new Recette(
             "TestRecette",
@@ -123,6 +127,7 @@ class DAOTest extends TestCase {
         $this->expectExceptionMessage("Récupération de recettes impossible");
     }
 
+    // Fonction TU de recuperation d une recette par son ID
     public function testGetRecetteById() {
         $stmt = $this->pdo->query("INSERT INTO recette(id, nom, img, etape1, etape2, etape3, etape4, etape5, etape6, etape7, etape8, id_categorie) VALUES(999, 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 1)");
         $stmt->execute();
@@ -133,6 +138,7 @@ class DAOTest extends TestCase {
         $this->expectExceptionMessage("Récupération de recettes impossible");
     }    
     
+    // Fonction TU de recuperation d une recette par sa categorie
     public function testGetRecetteByCategorie() {
         $testRecette = new Recette(
             "TestRecetteByCategorie",
@@ -154,6 +160,7 @@ class DAOTest extends TestCase {
         $this->expectExceptionMessage("Récupération de recettes par catégorie impossible");
     }
     
+    // Fonction TU de recuperation d ingredients
     public function testGetIngredient() {
         $stmt = $this->pdo->query("INSERT INTO ingredient(id, nom, img, id_recette) VALUES(999, 'Test', 'test', '1')");
         $stmt->execute();
@@ -165,6 +172,7 @@ class DAOTest extends TestCase {
 
     }
     
+    // Fonction TU de recuperation d un ingredient par une recette
     public function testGetIngredientByRecette() {
         $testRecette = new Recette(
             "TestRecetteForIngredient",
@@ -194,6 +202,7 @@ class DAOTest extends TestCase {
         $this->expectExceptionMessage("Récupération des ingrédients par recette impossible");
     }
 
+    // Fonction TU de suppression d une categorie par un ID
     public function testRemoveCategorieById() {
         $stmt = $this->pdo->query("INSERT INTO categorie(id, nom, img) VALUES(500, 'Test', 'test')");
         $stmt->execute();
@@ -205,6 +214,7 @@ class DAOTest extends TestCase {
         $this->expectExceptionMessage("Suppression des catégories par id impossible");
     }
     
+    // Fonction TU de suppression d une recette par un ID
     public function testRemoveRecetteById() {
         $stmt = $this->pdo->query("INSERT INTO recette(id, nom, img, etape1, etape2, etape3, etape4, etape5, etape6, etape7, etape8, id_categorie) VALUES(9999, test, test, test, test, test, test, test, test, test, test, 1)");
         $stmt->execute();
@@ -216,6 +226,7 @@ class DAOTest extends TestCase {
         $this->expectExceptionMessage("Suppression des recettes par id impossible");
     }
     
+    // Fonction TU de suppression d un ingredient par un ID
     public function testRemoveIngredientById() {
         $stmt = $this->pdo->query("INSERT INTO ingredient(id, nom, img, id_recette) VALUES(9999, 'nom', 'test', 1)");
         $stmt->execute();
@@ -228,6 +239,8 @@ class DAOTest extends TestCase {
     }
     
 
+    // Fonction TU de recherche
+    // Utilisation du dataProvider
  /**
      * @dataProvider searchProvider
      */
@@ -254,6 +267,7 @@ class DAOTest extends TestCase {
         $this->expectExceptionMessage("Recherche impossible");
     }
 
+    // Fonction provider pour stocker des données utilisés testSearch()
     public function searchProvider()
     {
         return [
