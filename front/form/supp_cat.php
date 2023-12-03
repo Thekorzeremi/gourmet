@@ -1,5 +1,5 @@
 <?php include '../../back/src/dao.php'; ?>
-
+<!-- page de suppression de categorie -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +55,7 @@
     </div>
     <div class="content-sct">
         <?php
+        // formulaire pour elements pour la requete en id 4 dans req.php
             $id = 4;
             echo '<div class="form">';
             echo '<form action="req.php?id=' . $id . '" method="post">';

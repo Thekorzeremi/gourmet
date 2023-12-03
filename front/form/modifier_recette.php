@@ -1,5 +1,5 @@
 <?php include '../../back/src/dao.php'; ?>
-
+<!-- page de modification de recette -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +55,7 @@
     </div>
     <div class="content-sct">
         <?php
+        // formulaire vers req.php en id 7
             $id = 7;
             $recettes = $DAO->getRecette();
             foreach ($recettes as $recette) {

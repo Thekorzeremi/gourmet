@@ -1,5 +1,5 @@
 <?php include '../../back/src/dao.php'; ?>
-
+<!-- formulaire d ajout d ingredient  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +55,7 @@
     </div>
     <div class="content-sct">
         <?php
+        // formulaire d ajout d ingredient en id2 vers req.php
         $rec = $DAO->getRecette();
             $id = 2;
             echo '<div class="form">';

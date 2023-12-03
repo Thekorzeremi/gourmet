@@ -1,5 +1,5 @@
 <?php include '../../back/src/dao.php'; ?>
-
+<!-- page de suppression des recettes -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,11 +55,13 @@
     </div>
     <div class="content-sct">
         <?php
-            $id = 5;
+            // Formulaire pour element lier à la suppression
+            $id = 5; //id pour savoir quelle requete effectuee dans req.php
             echo '<div class="form">';
             echo '<form action="req.php?id=' . $id . '" method="post">';
             echo "<h2>Choisir l'élément à supprimer :</h2>";
             $rec3 = $DAO->getRecette();
+            //affichage des recettes
             foreach ($rec3 as $recs) {
                 echo "<div class='catGrid'>";
                 echo "<p>{$recs['id']}-{$recs['nom']}</p>";

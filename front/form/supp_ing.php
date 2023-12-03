@@ -1,5 +1,5 @@
 <?php include '../../back/src/dao.php'; ?>
-
+<!-- page pour supprimer ingredients -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +55,7 @@
     </div>
     <div class="content-sct">
         <?php
+        // formulaire pour elements pour la requete en id 6 dans req.php
             $id = 6;
             echo '<div class="form">';
             echo '<form action="req.php?id=' . $id . '" method="post">';

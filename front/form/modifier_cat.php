@@ -1,5 +1,5 @@
 <?php include '../../back/src/dao.php'; ?>
-
+<!-- formulaire de modification de categorie -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +55,7 @@
     </div>
     <div class="content-sct">
         <?php
+        // formulaire de modification de categorie vers req.php en id8
             $id = 8;
             $categories = $DAO->getCategorie();
             foreach ($categories as $categorie) {

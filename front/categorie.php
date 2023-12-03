@@ -1,5 +1,5 @@
 <?php include '../back/src/dao.php'; ?>
-
+<!-- affichage des recettes en fonction de la categorie selectionnee dans la navbar -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,13 +55,16 @@
     </div>
     <div class="content-sct">
         <?php
+            // récuperation de l'id par methode GET
             $idR  = $_GET['id'];
+            // Recuperation des recettes correspondantes à l id
             $recettes = $DAO->getRecetteByCategory($idR);
             echo "<div class='search-sct'>";
             echo "<div class='title-sct'>";
             echo "<h2>Filtre par catégorie ⚙️</h2>";
             echo "</div>";
             echo "<div class='grid-sct'>";
+            // affichage des recettes
             foreach ($recettes as $resultat) {
                     echo '<a class="link" href="recette.php?id=' . $resultat['id'] . '" style="color: black; text-decoration: none;">';
                     echo "<div class='grid'>";

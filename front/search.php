@@ -1,3 +1,4 @@
+<!-- Page pour recherche -->
 <?php include '../back/src/dao.php'; ?>
 
 <!DOCTYPE html>
@@ -29,9 +30,10 @@
             <div class="botbar-sct">
                 <div class="allbtn-sct">
                     <?php
+                    // recuperation des categories
                     $categories = $DAO->getCategorie();
                     $counter = 0;
-
+                    // boucle for pour recuperer les categories
                     foreach ($categories as $categorie) {
                         if ($counter < 6) {
                             echo '<div class="btn-sct">';
@@ -55,8 +57,9 @@
     </div>
     <div class="content-sct">
         <?php
+            // affichage des resultats de la recherche si des resultats on etait trouves
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                if (isset($_POST["searchbar"])) {
+                if (isset($_POST["searchbar"])) { //si resultat
                     $searchValue = $_POST["searchbar"];
                     echo "<div class='search-sct'>";
                     echo "<div class='title-sct'>";

@@ -1,19 +1,24 @@
 <?php
 
+// utilisation de PHP unit et TestCase
 use PHPUnit\Framework\TestCase;
 
+// utilisation de dao.php
 require_once '/Applications/XAMPP/xamppfiles/htdocs/TU-MARMITON/back/src/dao.php';
 
+// Classe DAOTest pour effectuer nos TU
 class DAOTest extends TestCase {
     private $pdo;
     private $dao;
 
+    // Fonction setUp pour configurer DB et declarer la variable DAO
     protected function setUp(): void
     {
         $this->configureDatabase();
         $this->dao = new DAO($this->pdo);
     }
 
+    // Fonction de configuration de la DB à partir du .env (il faut dotenv)
     private function configureDatabase(): void
     {
         $this->pdo = new PDO(
@@ -30,6 +35,7 @@ class DAOTest extends TestCase {
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
+    // fonction TU d ajout de categorie
     public function testAddCategorie()
     {
         $testCategorie = new Categorie(

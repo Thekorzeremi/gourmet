@@ -1,5 +1,5 @@
 <?php include '../back/src/dao.php'; ?>
-
+<!-- page d accueil du site -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="index.scss">
 </head>
 <body>
+    <!-- barre de navigation -->
     <div class="navbar-sct">
             <div class="topbar-sct">
                 <div class="logo-sct" style="margin: 0 0 0 2rem">
@@ -18,6 +19,7 @@
                     <a class='link' href="gestion.php">
                         <img src="assets/data.svg">
                     </a>
+                    <!-- redireczion avec methode post pour la recherche vers search.php -->
                     <form action="search.php" method="post">
                         <input type="search" name="searchbar" id="searchbar" placeholder='Des recettes, des ingrédients...' required/>
                         <div id="img">
@@ -29,9 +31,10 @@
             <div class="botbar-sct">
                 <div class="allbtn-sct">
                     <?php
+                    // recuperation de toutes les categories
                     $categories = $DAO->getCategorie();
                     $counter = 0;
-
+                    // affichage des categories et redirection vers la page categorie correspondante
                     foreach ($categories as $categorie) {
                         if ($counter < 6) {
                             echo '<div class="btn-sct">';
@@ -54,14 +57,17 @@
             </div>
         </div>
     </div>
+    <!-- Contenu -->
     <div class="content-sct">
         <?php
+            // differentes sections pour les recettes
             echo "<div class='trend-sct'>";
                 echo "<div class='title-sct'>";
                     echo "<h2>À la une de KOUUIZINE 🍴</h2>";
                 echo "</div>";
                 echo "<div class='grid-sct'>";
                     echo "<div class='grid'>";
+                    // reception et affichage des recettes
                     $recettes = $DAO->getRecette();
                     $counter = 1;
                     foreach ($recettes as $recette) {

@@ -1,5 +1,5 @@
 <?php include '../back/src/dao.php'; ?>
-
+<!-- page de gestion pour la base de données -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,13 +56,16 @@
     </div>
     <div class="content-sct">
         <?php
+        // reception de tous les elements de la base de données
         $categories = $DAO->getCategorie();
         $recettes = $DAO->getRecette();
         $ingredients = $DAO->getIngredient();
-
+        // affichage des differents elements categories, ingredients et recettes
+        // categorie
         echo "<div class='gestion-sct'>";
             echo "<div class='cat'>";
                 echo "<div class='btn'>";
+                    // redirection vers la page d ajout
                     echo "<a href='form/ajouter_cat.php'>
                           <input 
                                 type='submit' 
@@ -70,6 +73,7 @@
                                 style='background: transparent; border: none; cursor: pointer;'
                             >
                           </a>";
+                    // redirection vers la page de modification
                     echo "<a href='form/modifier_cat.php'>
                         <input 
                                 type='submit' 
@@ -77,6 +81,7 @@
                                 style='background: transparent; border: none; cursor: pointer;'
                         >
                         </a>";
+                    // redirection vers la page de suppression
                     echo "<a href='form/supp_cat.php'>
                         <input 
                                 type='submit' 
@@ -86,6 +91,7 @@
                         </a>";
                 echo "</div>";
                 echo "<h2>Catégories</h2>";
+                // affichage des elements
                 foreach ($categories as $categorie) {
                     echo '<div class="btn-sct">';
                         echo '<div id="img">';
@@ -97,9 +103,10 @@
                     echo '</div>';
                 }
             echo "</div>";
-
+            // recette
             echo "<div class='rec'>";
                 echo "<div class='btn'>";
+                // redirection vers la page d ajout
                     echo "<a href='form/ajouter_recette.php'>
                             <input 
                                 type='submit' 
@@ -107,6 +114,7 @@
                                 style='background: transparent; border: none; cursor: pointer;'
                             >
                           </a>";
+                        //   redirection vers la page de modification
                     echo "<a href='form/modifier_recette.php'>
                           <input 
                                 type='submit' 
@@ -114,6 +122,7 @@
                                 style='background: transparent; border: none; cursor: pointer;'
                           >
                           </a>";
+                    // redirection vers la page de suppression
                     echo "<a href='form/supp_recette.php'>
                           <input 
                                 type='submit' 
@@ -123,6 +132,7 @@
                           </a>";
                 echo "</div>";
                 echo "<h2>Recettes</h2>";
+                // affichage des elements
                 foreach ($recettes as $recette) {
                     echo '<div class="btn-sct">';
                         echo '<div id="img">';
@@ -135,9 +145,10 @@
                     echo '</div>'; 
                 }
             echo "</div>";
-
+            // ingredient
             echo "<div class='ing'>";
                 echo "<div class='btn'>";
+                // redirection vers la page d'ajout
                     echo "<a href='form/ajouter_ing.php'>
                             <input 
                                 type='submit' 
@@ -145,6 +156,7 @@
                                 style='background: transparent; border: none; cursor: pointer;'
                             >
                         </a>";
+                    // redirection vers la page de modification
                     echo "<a href='form/modifier_ing.php'>
                         <input 
                                 type='submit' 
@@ -152,6 +164,7 @@
                                 style='background: transparent; border: none; cursor: pointer;'
                         >
                         </a>";
+                        // redirection vers la page de suppression
                     echo "<a href='form/supp_ing.php'>
                         <input 
                                 type='submit' 
@@ -161,6 +174,7 @@
                         </a>";
                 echo "</div>";
                 echo "<h2>Ingrédients</h2>";
+                // affichage des elements
                 foreach ($ingredients as $ingredient) {
                     echo '<div class="btn-sct">';
                         echo '<div id="img">';

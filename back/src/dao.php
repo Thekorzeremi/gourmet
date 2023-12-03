@@ -2,15 +2,18 @@
 
 include 'config.php';
 
+// classe categorie
 class Categorie {
     private $nom;
     private $image;
 
+    // fonction construct
     public function __construct($nom, $image) {
         $this->nom = $nom;
         $this->image = $image;
     }
 
+    // GETTER
     public function getNom() {
         return $this->nom;
     }
@@ -20,6 +23,7 @@ class Categorie {
     }
 }
 
+// classe recette
 class Recette {
     private $nom;
     private $image;
@@ -33,6 +37,7 @@ class Recette {
     private $etape8;
     private $id_categorie;
 
+    // fonction construct
     public function __construct($nom, $image, $etape1, $etape2, $etape3, $etape4, $etape5, $etape6, $etape7, $etape8, $id_categorie) {
         $this->nom = $nom;
         $this->image = $image;
@@ -47,6 +52,7 @@ class Recette {
         $this->id_categorie = $id_categorie;
     }
 
+    //GETTER
     public function getNom() {
         return $this->nom;
     }
@@ -92,12 +98,14 @@ class Recette {
     }
 }
 
+// Classe ingredient
 class Ingredient {
     private $nom;
     private $quantite;
     private $image;
     private $id_recette;
 
+    // fonction construct
     public function __construct($nom, $quantite, $image, $id_recette) {
         $this->nom = $nom;
         $this->quantite = $quantite;
@@ -105,6 +113,7 @@ class Ingredient {
         $this->id_recette = $id_recette;
     }
 
+    // GETTER
     public function getNom() {
         return $this->nom;
     }
@@ -122,13 +131,17 @@ class Ingredient {
     }
 }
 
+// Classe DAO qui va gérer nos requetes
 class DAO {
     private $bdd;
 
+    // fonction construct
     public function __construct($bdd) {
         $this->bdd = $bdd;
     }
 
+
+    // FONCTION D AJOUTS
     public function addCategorie($categorie) {
         try {
             $requete = $this->bdd->prepare('INSERT INTO Categorie (nom, img) VALUES (?, ?)');
@@ -181,6 +194,7 @@ class DAO {
         }
     }
 
+    // FONCTION DE RECUPERATION
     public function getCategorie() {
         try {
             $row = $this->bdd->prepare("SELECT * FROM Categorie");
@@ -249,6 +263,7 @@ class DAO {
         }
     }
 
+    // FONCTION DE MISE A JOUR DES DONNÉES
     public function updateCategorie($id, $categorie) {
         try {
             $row = $this->bdd->prepare("UPDATE Categorie SET nom = ?, img = ? WHERE id = ?");
@@ -282,6 +297,7 @@ class DAO {
         }
     }
 
+    // FONCTION DE SUPPRESSION DES DONNÈES
     public function removeCategorieById($id) {
         try {
             $row = $this->bdd->prepare("DELETE FROM Categorie WHERE id = ?");
@@ -309,6 +325,7 @@ class DAO {
         }
     }
 
+    // FONCTION DE RECHERCHES EN FONCTION DU NOM
     public function search($input) {
         try {
             $row = $this->bdd->prepare("SELECT * FROM recette WHERE nom = ?");
@@ -320,6 +337,7 @@ class DAO {
     }
 }
 
+// DECLARATION DE LA CLASSE DAO
 $DAO = new DAO($bdd);
 // $burger = new Recette("Burger", "img.com", "Coupe", "Cuit", "Presente", "", "", "", "", "", 1);
 // $ail = new Ingredient("Ail", 15, "ail.png", 1);

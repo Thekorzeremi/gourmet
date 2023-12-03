@@ -1,5 +1,5 @@
 <?php include '../../back/src/dao.php'; ?>
-
+<!-- formulaire d ajout de categorie -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +55,7 @@
     </div>
     <div class="content-sct">
         <?php
+        // formulaire d ajout de categorie vers req.php en id 1
             $id = 1;
             echo '<div class="form">';
             echo '<form action="req.php?id=' . $id . '" method="post">';

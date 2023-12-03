@@ -1,5 +1,5 @@
 <?php 
-
+// page popup d affichage des recettes
 include '../back/src/dao.php'; ?>
 
 <!DOCTYPE html>
@@ -33,7 +33,7 @@ include '../back/src/dao.php'; ?>
                     <?php
                     $categories = $DAO->getCategorie();
                     $counter = 0;
-
+                    
                     foreach ($categories as $categorie) {
                         if ($counter < 6) {
                             echo '<div class="btn-sct">';
@@ -57,10 +57,13 @@ include '../back/src/dao.php'; ?>
     </div>
     <div class="content-sct">
         <?php
+            // methode get pour recevoir l'ID de l'URL
             $idR  = $_GET['id'];
+            // Recuperation de la recette par l id
             $recettes = $DAO->getRecetteById($idR);
+            // recuperation des ingredients de la recette
             $ingredients = $DAO->getIngredientByRecette($idR);
-
+            // affichage de la recette et de ses infos
             foreach ($recettes as $recette) {
                 echo '<div id="label">';
                 echo "<p style='margin-top: 2rem; font-size: 1.5rem'>{$recette['nom']}</p>";
@@ -70,6 +73,7 @@ include '../back/src/dao.php'; ?>
                 echo '</div>';
                 echo "<h2>Ingrédients</h2>";
                 echo "<div class='ing-sct'>";
+                // affichage des ingredients
                 foreach ($ingredients as $ing) {
                     echo "<div class='card'>";
                     echo "<img src={$ing['img']} style='height: 5rem;'>";
@@ -78,6 +82,7 @@ include '../back/src/dao.php'; ?>
                 }
                 echo "</div>";
                 echo "<h2>Préparation</h2>";
+                // affichage des etapes
                 for ($i = 1; $i < 9; $i++) {
                     if ($recette['etape' . $i] != null) {
                         echo "<div class='step-sct'>";
