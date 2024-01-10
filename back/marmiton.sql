@@ -1,6 +1,10 @@
-CREATE DATABASE IF NOT EXISTS marmiton;
+CREATE USER 'gourmet'@'localhost' IDENTIFIED BY 'gourmet';
+GRANT ALL PRIVILEGES ON gourmet.* TO 'gourmet'@'localhost';
+FLUSH PRIVILEGES;
 
-USE marmiton;
+CREATE DATABASE IF NOT EXISTS gourmet;
+
+USE gourmet;
 
 CREATE TABLE Categorie (
     id INT AUTO_INCREMENT PRIMARY KEY,
